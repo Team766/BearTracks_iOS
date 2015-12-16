@@ -22,6 +22,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
 
         usernameTextField.delegate = self
         passwordTextField.delegate = self
+        
+        passwordTextField.secureTextEntry = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,16 +31,28 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: UITextFieldDelegate:
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
+    func textFieldDidEndEditing(textField: UITextField) {
+        login()
+    }
     
     //MARK: Actions
     @IBAction func loginAction(sender: UIButton) {
+        login()
+    }
+    
+    func login(){
         let userName = usernameTextField.text
         let passWord = passwordTextField.text
         ref.authUser(userName!, password: passWord!,
             withCompletionBlock: {error, authData in
                 if error != nil{
-                
+                    
                 }else{
                     self.performSegueWithIdentifier("loggedIn", sender: nil)
                 }
