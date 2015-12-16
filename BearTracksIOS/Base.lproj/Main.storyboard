@@ -3,7 +3,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Home-->
@@ -18,18 +20,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" text="Home" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="222" y="278" width="157.5" height="42"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Home" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
+                                <rect key="frame" x="20" y="70" width="560" height="51"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="44"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="valkyrie" translatesAutoresizingMaskIntoConstraints="NO" id="hGC-5i-HeJ">
+                                <rect key="frame" x="45" y="133.5" width="510" height="333"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hGC-5i-HeJ" secondAttribute="height" multiplier="265:173" id="wl2-a2-pzd"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="8V2-hN-UB5"/>
+                            <constraint firstItem="hGC-5i-HeJ" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="GhY-V0-HbB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KQZ-1w-vlD" secondAttribute="trailing" id="ItK-zD-zyl"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="50" id="m2F-QO-5JS"/>
+                            <constraint firstItem="hGC-5i-HeJ" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="p3l-XI-5QP"/>
+                            <constraint firstItem="hGC-5i-HeJ" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.85" id="sQc-lE-301"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="ic_home" id="acW-dT-cKf"/>
@@ -50,14 +62,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="People" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgZ-zd-yZw">
-                                <rect key="frame" x="268" y="228" width="121" height="55"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zte-RD-yI7">
+                                <rect key="frame" x="238" y="272" width="125" height="56"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Roster">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="36" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zte-RD-yI7" firstAttribute="centerY" secondItem="pwM-mx-Uiw" secondAttribute="centerY" id="85S-JF-bYW"/>
+                            <constraint firstItem="Zte-RD-yI7" firstAttribute="centerX" secondItem="pwM-mx-Uiw" secondAttribute="centerX" id="nSM-2o-Nts"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Roster" image="ic_roster" id="6H2-TD-ufL"/>
                 </viewController>
@@ -77,14 +100,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Roles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUe-tr-iqM">
-                                <rect key="frame" x="279" y="278" width="122" height="71"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUe-tr-iqM">
+                                <rect key="frame" x="239" y="264" width="122" height="71"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Roles">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="36" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bUe-tr-iqM" firstAttribute="centerY" secondItem="SiZ-q9-dgo" secondAttribute="centerY" id="Hze-xL-7oX"/>
+                            <constraint firstItem="bUe-tr-iqM" firstAttribute="centerX" secondItem="SiZ-q9-dgo" secondAttribute="centerX" id="U1j-MH-zx9"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Roles" image="ic_roles" id="M7d-ZQ-SVP"/>
                 </viewController>
@@ -246,5 +280,6 @@
         <image name="ic_home" width="24" height="24"/>
         <image name="ic_roles" width="24" height="24"/>
         <image name="ic_roster" width="24" height="24"/>
+        <image name="valkyrie" width="523" height="397"/>
     </resources>
 </document>
