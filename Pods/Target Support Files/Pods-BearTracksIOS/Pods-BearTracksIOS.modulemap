@@ -1,0 +1,6 @@
+framework module Pods_BearTracksIOS {
+  umbrella header "Pods-BearTracksIOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

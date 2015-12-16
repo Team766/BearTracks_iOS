@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6FA8C3732A2953186584F6F6 /* Pods_BearTracksIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 416F3533638D006EABFEE2C1 /* Pods_BearTracksIOS.framework */; };
+		A570BD421C1F7D61000AC71F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A570BD401C1F7D61000AC71F /* LoginViewController.swift */; };
+		A570BD431C1F7D61000AC71F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A570BD411C1F7D61000AC71F /* LoginViewController.xib */; };
 		A5938B811C1E8BCE00F878FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5938B801C1E8BCE00F878FA /* AppDelegate.swift */; };
 		A5938B831C1E8BCE00F878FA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5938B821C1E8BCE00F878FA /* FirstViewController.swift */; };
 		A5938B851C1E8BCE00F878FA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5938B841C1E8BCE00F878FA /* SecondViewController.swift */; };
@@ -27,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		416F3533638D006EABFEE2C1 /* Pods_BearTracksIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BearTracksIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A570BD401C1F7D61000AC71F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A570BD411C1F7D61000AC71F /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		A5938B7D1C1E8BCE00F878FA /* BearTracksIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BearTracksIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5938B801C1E8BCE00F878FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5938B821C1E8BCE00F878FA /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +44,8 @@
 		A5938B931C1E8BCE00F878FA /* BearTracksIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BearTracksIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5938B971C1E8BCE00F878FA /* BearTracksIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearTracksIOSTests.swift; sourceTree = "<group>"; };
 		A5938B991C1E8BCE00F878FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D971F13ADEDA2C33AC8AA01C /* Pods-BearTracksIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BearTracksIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BearTracksIOS/Pods-BearTracksIOS.release.xcconfig"; sourceTree = "<group>"; };
+		ED63C1767CA4B41D270B0A5F /* Pods-BearTracksIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BearTracksIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BearTracksIOS/Pods-BearTracksIOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FA8C3732A2953186584F6F6 /* Pods_BearTracksIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +67,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8DE7C3FCBB839478D263EA8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED63C1767CA4B41D270B0A5F /* Pods-BearTracksIOS.debug.xcconfig */,
+				D971F13ADEDA2C33AC8AA01C /* Pods-BearTracksIOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A5938B741C1E8BCE00F878FA = {
 			isa = PBXGroup;
 			children = (
 				A5938B7F1C1E8BCE00F878FA /* BearTracksIOS */,
 				A5938B961C1E8BCE00F878FA /* BearTracksIOSTests */,
 				A5938B7E1C1E8BCE00F878FA /* Products */,
+				B5C347CD1FE1B3AF7F28D65D /* Frameworks */,
+				8DE7C3FCBB839478D263EA8E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +99,8 @@
 		A5938B7F1C1E8BCE00F878FA /* BearTracksIOS */ = {
 			isa = PBXGroup;
 			children = (
+				A570BD401C1F7D61000AC71F /* LoginViewController.swift */,
+				A570BD411C1F7D61000AC71F /* LoginViewController.xib */,
 				A5938B801C1E8BCE00F878FA /* AppDelegate.swift */,
 				A5938B821C1E8BCE00F878FA /* FirstViewController.swift */,
 				A5938B841C1E8BCE00F878FA /* SecondViewController.swift */,
@@ -99,6 +121,14 @@
 			path = BearTracksIOSTests;
 			sourceTree = "<group>";
 		};
+		B5C347CD1FE1B3AF7F28D65D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				416F3533638D006EABFEE2C1 /* Pods_BearTracksIOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5938B9C1C1E8BCE00F878FA /* Build configuration list for PBXNativeTarget "BearTracksIOS" */;
 			buildPhases = (
+				AB80A024E6BC693111DA5008 /* Check Pods Manifest.lock */,
 				A5938B791C1E8BCE00F878FA /* Sources */,
 				A5938B7A1C1E8BCE00F878FA /* Frameworks */,
 				A5938B7B1C1E8BCE00F878FA /* Resources */,
+				52234FFF072E4966DD1CE82D /* Embed Pods Frameworks */,
+				2994BA9D28CE46B18D7A3927 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,6 +215,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A570BD431C1F7D61000AC71F /* LoginViewController.xib in Resources */,
 				A5938B8D1C1E8BCE00F878FA /* LaunchScreen.storyboard in Resources */,
 				A5938B8A1C1E8BCE00F878FA /* Assets.xcassets in Resources */,
 				A5938B881C1E8BCE00F878FA /* Main.storyboard in Resources */,
@@ -197,11 +231,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2994BA9D28CE46B18D7A3927 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BearTracksIOS/Pods-BearTracksIOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52234FFF072E4966DD1CE82D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BearTracksIOS/Pods-BearTracksIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB80A024E6BC693111DA5008 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A5938B791C1E8BCE00F878FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A570BD421C1F7D61000AC71F /* LoginViewController.swift in Sources */,
 				A5938B851C1E8BCE00F878FA /* SecondViewController.swift in Sources */,
 				A5938B811C1E8BCE00F878FA /* AppDelegate.swift in Sources */,
 				A5938B831C1E8BCE00F878FA /* FirstViewController.swift in Sources */,
@@ -329,9 +412,11 @@
 		};
 		A5938B9D1C1E8BCE00F878FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED63C1767CA4B41D270B0A5F /* Pods-BearTracksIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BearTracksIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = team766.BearTracksIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -340,9 +425,11 @@
 		};
 		A5938B9E1C1E8BCE00F878FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D971F13ADEDA2C33AC8AA01C /* Pods-BearTracksIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BearTracksIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = team766.BearTracksIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -392,6 +479,7 @@
 				A5938B9E1C1E8BCE00F878FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A5938B9F1C1E8BCE00F878FA /* Build configuration list for PBXNativeTarget "BearTracksIOSTests" */ = {
 			isa = XCConfigurationList;
@@ -400,6 +488,7 @@
 				A5938BA11C1E8BCE00F878FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
