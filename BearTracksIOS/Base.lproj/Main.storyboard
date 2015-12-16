@@ -173,6 +173,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="qWz-Uy-jLh" id="tat-Qc-mvI"/>
                         <outlet property="usernameTextField" destination="Nk2-fn-rcf" id="zey-1x-msc"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="loggedIn" id="fn7-G9-gbs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eET-OY-Jyb" userLabel="First Responder" sceneMemberID="firstResponder"/>

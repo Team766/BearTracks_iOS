@@ -9,18 +9,19 @@
 import UIKit
 import Firebase
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate{
     
     //MARK: Properties
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    var ref = Firebase(url: "https://beartracks.firebaseio.com/")
+    let ref = Firebase(url: "https://beartracks.firebaseio.com/")
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,8 +29,19 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
     //MARK: Actions
     @IBAction func loginAction(sender: UIButton) {
-        
+        let userName = usernameTextField.text
+        let passWord = passwordTextField.text
+        ref.authUser(userName!, password: passWord!,
+            withCompletionBlock: {error, authData in
+                if error != nil{
+                
+                }else{
+                    self.performSegueWithIdentifier("loggedIn", sender: nil)
+                }
+        })
     }
 }
