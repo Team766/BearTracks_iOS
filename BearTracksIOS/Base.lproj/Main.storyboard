@@ -67,7 +67,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Roster">
                                         <attributes>
-                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="36" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
@@ -82,7 +82,7 @@
                             <constraint firstItem="Zte-RD-yI7" firstAttribute="centerX" secondItem="pwM-mx-Uiw" secondAttribute="centerX" id="nSM-2o-Nts"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Roster" image="ic_roster" id="6H2-TD-ufL"/>
+                    <tabBarItem key="tabBarItem" title="Roster" image="ic_contacts" id="6H2-TD-ufL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21y-OT-j6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,7 +105,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Roles">
                                         <attributes>
-                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="36" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
@@ -120,7 +120,7 @@
                             <constraint firstItem="bUe-tr-iqM" firstAttribute="centerX" secondItem="SiZ-q9-dgo" secondAttribute="centerX" id="U1j-MH-zx9"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Roles" image="ic_roles" id="M7d-ZQ-SVP"/>
+                    <tabBarItem key="tabBarItem" title="Roles" image="ic_assignment" id="M7d-ZQ-SVP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Vw-ef-WI8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -152,7 +152,7 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calendar" image="ic_calendar" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="ic_today" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -276,10 +276,10 @@
     </scenes>
     <resources>
         <image name="bear_paws" width="50" height="50"/>
-        <image name="ic_calendar" width="24" height="24"/>
+        <image name="ic_assignment" width="24" height="24"/>
+        <image name="ic_contacts" width="24" height="24"/>
         <image name="ic_home" width="24" height="24"/>
-        <image name="ic_roles" width="24" height="24"/>
-        <image name="ic_roster" width="24" height="24"/>
+        <image name="ic_today" width="24" height="24"/>
         <image name="valkyrie" width="523" height="397"/>
     </resources>
 </document>
