@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 class LoginViewController: UIViewController, UITextFieldDelegate{
     
@@ -37,10 +36,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         return true
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
-        login()
-    }
-    
     //MARK: Actions
     @IBAction func loginAction(sender: UIButton) {
         login()
@@ -52,7 +47,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         ref.authUser(userName!, password: passWord!,
             withCompletionBlock: {error, authData in
                 if error != nil{
-                    
+                    self.view.makeToast("Please enter valid credentials")
                 }else{
                     self.performSegueWithIdentifier("loggedIn", sender: nil)
                 }

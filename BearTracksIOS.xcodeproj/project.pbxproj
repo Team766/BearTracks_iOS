@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6FA8C3732A2953186584F6F6 /* Pods_BearTracksIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 416F3533638D006EABFEE2C1 /* Pods_BearTracksIOS.framework */; };
+		34B4FDE7924705282FBC4D8F /* libPods-BearTracksIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C85E844BE8EAF257CEC59969 /* libPods-BearTracksIOS.a */; };
 		A570BD421C1F7D61000AC71F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A570BD401C1F7D61000AC71F /* LoginViewController.swift */; };
 		A5938B811C1E8BCE00F878FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5938B801C1E8BCE00F878FA /* AppDelegate.swift */; };
 		A5938B831C1E8BCE00F878FA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5938B821C1E8BCE00F878FA /* FirstViewController.swift */; };
@@ -29,7 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		416F3533638D006EABFEE2C1 /* Pods_BearTracksIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BearTracksIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A55629331C2374D800421A25 /* BearTracksIOS-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BearTracksIOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		A570BD401C1F7D61000AC71F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A5938B7D1C1E8BCE00F878FA /* BearTracksIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BearTracksIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5938B801C1E8BCE00F878FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +42,7 @@
 		A5938B931C1E8BCE00F878FA /* BearTracksIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BearTracksIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5938B971C1E8BCE00F878FA /* BearTracksIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearTracksIOSTests.swift; sourceTree = "<group>"; };
 		A5938B991C1E8BCE00F878FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C85E844BE8EAF257CEC59969 /* libPods-BearTracksIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BearTracksIOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D971F13ADEDA2C33AC8AA01C /* Pods-BearTracksIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BearTracksIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BearTracksIOS/Pods-BearTracksIOS.release.xcconfig"; sourceTree = "<group>"; };
 		ED63C1767CA4B41D270B0A5F /* Pods-BearTracksIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BearTracksIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BearTracksIOS/Pods-BearTracksIOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FA8C3732A2953186584F6F6 /* Pods_BearTracksIOS.framework in Frameworks */,
+				34B4FDE7924705282FBC4D8F /* libPods-BearTracksIOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +98,7 @@
 		A5938B7F1C1E8BCE00F878FA /* BearTracksIOS */ = {
 			isa = PBXGroup;
 			children = (
+				A55629331C2374D800421A25 /* BearTracksIOS-Bridging-Header.h */,
 				A570BD401C1F7D61000AC71F /* LoginViewController.swift */,
 				A5938B801C1E8BCE00F878FA /* AppDelegate.swift */,
 				A5938B821C1E8BCE00F878FA /* FirstViewController.swift */,
@@ -121,7 +123,7 @@
 		B5C347CD1FE1B3AF7F28D65D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				416F3533638D006EABFEE2C1 /* Pods_BearTracksIOS.framework */,
+				C85E844BE8EAF257CEC59969 /* libPods-BearTracksIOS.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -411,11 +413,14 @@
 			baseConfigurationReference = ED63C1767CA4B41D270B0A5F /* Pods-BearTracksIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = BearTracksIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = team766.BearTracksIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./BearTracksIOS/BearTracksIOS-Bridging-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "./BearTracksIOS/BearTracksIOS-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -424,11 +429,13 @@
 			baseConfigurationReference = D971F13ADEDA2C33AC8AA01C /* Pods-BearTracksIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = BearTracksIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = team766.BearTracksIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./BearTracksIOS/BearTracksIOS-Bridging-Header.h";
 			};
 			name = Release;
 		};
