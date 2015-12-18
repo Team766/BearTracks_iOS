@@ -8,7 +8,7 @@
 
 #ifndef BearTrakcsIOS_Bridging_Header_h
 #define BearTrakcsIOS_Bridging_Header_h
-#import <Toast/UIView+Toast.h>
-#import <Firebase/Firebase.h>
+#import "Toast/UIView+Toast.h"
+#import "Firebase/Firebase.h"
 
 #endif /* BearTrakcsIOS_Bridging_Header_h */
