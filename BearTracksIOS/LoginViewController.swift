@@ -16,6 +16,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     
     let ref = Firebase(url: "https://beartracks.firebaseio.com/")
     
+    override func viewDidAppear(animated: Bool) {
+        if NSUserDefaults.standardUserDefaults().boolForKey("didLogin") {
+            // Terms have been accepted, proceed as normal
+            self.performSegueWithIdentifier("loggedIn", sender: nil)
+        } else {
+            // Terms have not been accepted. Show terms (perhaps using performSegueWithIdentifier)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -55,6 +64,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                     self.view.makeToast("Please enter valid credentials")
                 }else{
                     self.performSegueWithIdentifier("loggedIn", sender: nil)
+                    NSUserDefaults.standardUserDefaults().setBool(true, forKey: "didLogin")
                 }
         })
     }
