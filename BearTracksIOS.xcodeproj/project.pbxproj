@@ -10,7 +10,7 @@
 		34B4FDE7924705282FBC4D8F /* libPods-BearTracksIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C85E844BE8EAF257CEC59969 /* libPods-BearTracksIOS.a */; };
 		A570BD421C1F7D61000AC71F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A570BD401C1F7D61000AC71F /* LoginViewController.swift */; };
 		A5938B811C1E8BCE00F878FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5938B801C1E8BCE00F878FA /* AppDelegate.swift */; };
-		A5938B831C1E8BCE00F878FA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5938B821C1E8BCE00F878FA /* FirstViewController.swift */; };
+		A5938B831C1E8BCE00F878FA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5938B821C1E8BCE00F878FA /* HomeViewController.swift */; };
 		A5938B851C1E8BCE00F878FA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5938B841C1E8BCE00F878FA /* SecondViewController.swift */; };
 		A5938B881C1E8BCE00F878FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5938B861C1E8BCE00F878FA /* Main.storyboard */; };
 		A5938B8A1C1E8BCE00F878FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5938B891C1E8BCE00F878FA /* Assets.xcassets */; };
@@ -33,7 +33,7 @@
 		A570BD401C1F7D61000AC71F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A5938B7D1C1E8BCE00F878FA /* BearTracksIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BearTracksIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5938B801C1E8BCE00F878FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A5938B821C1E8BCE00F878FA /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		A5938B821C1E8BCE00F878FA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A5938B841C1E8BCE00F878FA /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		A5938B871C1E8BCE00F878FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5938B891C1E8BCE00F878FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 				A55629331C2374D800421A25 /* BearTracksIOS-Bridging-Header.h */,
 				A570BD401C1F7D61000AC71F /* LoginViewController.swift */,
 				A5938B801C1E8BCE00F878FA /* AppDelegate.swift */,
-				A5938B821C1E8BCE00F878FA /* FirstViewController.swift */,
+				A5938B821C1E8BCE00F878FA /* HomeViewController.swift */,
 				A5938B841C1E8BCE00F878FA /* SecondViewController.swift */,
 				A5938B861C1E8BCE00F878FA /* Main.storyboard */,
 				A5938B891C1E8BCE00F878FA /* Assets.xcassets */,
@@ -285,7 +285,7 @@
 				A570BD421C1F7D61000AC71F /* LoginViewController.swift in Sources */,
 				A5938B851C1E8BCE00F878FA /* SecondViewController.swift in Sources */,
 				A5938B811C1E8BCE00F878FA /* AppDelegate.swift in Sources */,
-				A5938B831C1E8BCE00F878FA /* FirstViewController.swift in Sources */,
+				A5938B831C1E8BCE00F878FA /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

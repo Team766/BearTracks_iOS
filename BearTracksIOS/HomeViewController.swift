@@ -10,9 +10,14 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet var homeImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:"imageTapped:")
+        homeImage.userInteractionEnabled = true
+        homeImage.addGestureRecognizer(tapGestureRecognizer)
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +25,10 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    //MARK: Actions
+    func imageTapped(gesture: UIGestureRecognizer){
+        UIApplication.sharedApplication().openURL(NSURL(string: "http://www.team766.com")!)
+    }
 
 }
 

@@ -45,6 +45,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="ic_home" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="homeImage" destination="hGC-5i-HeJ" id="BmB-4N-fPj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
