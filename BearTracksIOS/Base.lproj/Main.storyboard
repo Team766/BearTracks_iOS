@@ -54,80 +54,96 @@
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
         <!--Roster-->
-        <scene sceneID="7Zm-W8-4HG">
+        <scene sceneID="ULY-Zq-bJL">
             <objects>
-                <viewController id="Byu-e8-yyZ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3Dk-Or-IgR"/>
-                        <viewControllerLayoutGuide type="bottom" id="FYB-Ey-5A6"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="pwM-mx-Uiw">
+                <tableViewController id="Qjb-RX-p9r" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="snv-m6-poK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zte-RD-yI7">
-                                <rect key="frame" x="238" y="272" width="125" height="56"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Roster">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="36" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Zte-RD-yI7" firstAttribute="centerY" secondItem="pwM-mx-Uiw" secondAttribute="centerY" id="85S-JF-bYW"/>
-                            <constraint firstItem="Zte-RD-yI7" firstAttribute="centerX" secondItem="pwM-mx-Uiw" secondAttribute="centerX" id="nSM-2o-Nts"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Roster" image="ic_contacts" id="6H2-TD-ufL"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="21y-OT-j6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="BWy-Q5-4ah">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BWy-Q5-4ah" id="o44-M4-KU1">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Qjb-RX-p9r" id="iWW-pj-hs5"/>
+                            <outlet property="delegate" destination="Qjb-RX-p9r" id="cg3-gR-6LR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Roster" id="SA4-W9-Yvk"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zwa-ri-mo8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1480" y="-318"/>
+            <point key="canvasLocation" x="1483" y="-1101"/>
+        </scene>
+        <!--Roster-->
+        <scene sceneID="405-VW-gOy">
+            <objects>
+                <navigationController id="njI-Km-dxR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Roster" image="ic_contacts" id="ZbP-hO-e70"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="53v-gR-ZRz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Qjb-RX-p9r" kind="relationship" relationship="rootViewController" id="ohg-I3-fv4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zXD-xT-NNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1474" y="-351"/>
         </scene>
         <!--Roles-->
-        <scene sceneID="lV1-0o-JyS">
+        <scene sceneID="fA5-2k-0Vz">
             <objects>
-                <viewController id="wXs-Oe-aD1" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="EnF-8c-dY4"/>
-                        <viewControllerLayoutGuide type="bottom" id="b5b-VD-rk9"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="SiZ-q9-dgo">
+                <tableViewController id="qH1-wM-WCX" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="jhx-Bp-FAG">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUe-tr-iqM">
-                                <rect key="frame" x="239" y="264" width="122" height="71"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Roles">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="36" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="bUe-tr-iqM" firstAttribute="centerY" secondItem="SiZ-q9-dgo" secondAttribute="centerY" id="Hze-xL-7oX"/>
-                            <constraint firstItem="bUe-tr-iqM" firstAttribute="centerX" secondItem="SiZ-q9-dgo" secondAttribute="centerX" id="U1j-MH-zx9"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Roles" image="ic_assignment" id="M7d-ZQ-SVP"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Vw-ef-WI8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="lfM-s3-gxW">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lfM-s3-gxW" id="iOh-YU-nKj">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qH1-wM-WCX" id="t0P-gm-VcL"/>
+                            <outlet property="delegate" destination="qH1-wM-WCX" id="XJF-Mq-omK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Roles" id="YU8-uJ-P24"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZP-5d-AfI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1474" y="377"/>
+            <point key="canvasLocation" x="2330" y="374"/>
+        </scene>
+        <!--Roles-->
+        <scene sceneID="Zx6-WO-mEF">
+            <objects>
+                <navigationController id="Az7-BL-lR4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Roles" image="ic_assignment" id="tBq-rZ-StE"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZuG-3D-Gki">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qH1-wM-WCX" kind="relationship" relationship="rootViewController" id="yxF-Yl-pZM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="peH-BU-9I1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1510" y="374"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="wg7-f3-ORb">
@@ -268,8 +284,8 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="Byu-e8-yyZ" kind="relationship" relationship="viewControllers" id="ufA-OU-AvW"/>
-                        <segue destination="wXs-Oe-aD1" kind="relationship" relationship="viewControllers" id="ykb-BF-qoF"/>
+                        <segue destination="njI-Km-dxR" kind="relationship" relationship="viewControllers" id="UMt-1q-KdE"/>
+                        <segue destination="Az7-BL-lR4" kind="relationship" relationship="viewControllers" id="XIa-tS-gA9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
