@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A5938B7C1C1E8BCE00F878FA"
-            BuildableName = "BearTracksIOS.app"
+            BuildableName = "Bear Tracks.temp_caseinsensitive_renameIOS.app"
             BlueprintName = "BearTracksIOS"
-            ReferencedContainer = "container:BearTracksIOS.xcodeproj">
+            ReferencedContainer = "container:BearTracks.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A5938B7C1C1E8BCE00F878FA"
-            BuildableName = "BearTracksIOS.app"
+            BuildableName = "Bear Tracks.temp_caseinsensitive_renameIOS.app"
             BlueprintName = "BearTracksIOS"
-            ReferencedContainer = "container:BearTracksIOS.xcodeproj">
+            ReferencedContainer = "container:BearTracks.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
