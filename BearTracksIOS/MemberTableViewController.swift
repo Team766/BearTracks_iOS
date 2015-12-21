@@ -98,10 +98,10 @@ class MemberTableViewController: UITableViewController {
     func loadPeople(){
         ref.observeEventType(.ChildAdded, withBlock: { snapshot in
             let name = snapshot.value["name"] as? String
-            let email = snapshot.value["email"] as? String
             let photo = snapshot.value["photo"] as? String
-            let member = Member(name: name!, email: email!, photo: photo!)
+            let member = Member(name: name!, photo: photo!)
             self.members.append(member)
+            self.tableView.reloadData()
         })
     }
 

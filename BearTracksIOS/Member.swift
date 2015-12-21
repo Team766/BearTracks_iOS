@@ -12,12 +12,10 @@ class Member {
     
     //MARK: Properties
     let name: String
-    let email: String
     let photo: String
 
-    init(name:String, email:String, photo:String){
+    init(name:String, photo:String){
         self.name = name
-        self.email = email
         self.photo = photo
     }
 
