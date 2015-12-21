@@ -12,9 +12,9 @@ class Member {
     
     //MARK: Properties
     let name: String
-    let photo: String
+    let photo: UIImage
 
-    init(name:String, photo:String){
+    init(name:String, photo: UIImage){
         self.name = name
         self.photo = photo
     }

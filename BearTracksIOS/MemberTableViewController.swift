@@ -40,12 +40,9 @@ class MemberTableViewController: UITableViewController {
         let cellIdentifier = "MemberTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! MemberTableViewCell
         let member = members[indexPath.row]
-        
-        let url = NSURL(string: member.photo)!
-        let data = NSData(contentsOfURL: url)
-
+       
         cell.memberNameLabel.text = member.name
-        cell.memerPhotoView.image = UIImage(data: data!)
+        cell.memerPhotoView.image = member.photo
 
         return cell
     }
@@ -99,7 +96,12 @@ class MemberTableViewController: UITableViewController {
         ref.observeEventType(.ChildAdded, withBlock: { snapshot in
             let name = snapshot.value["name"] as? String
             let photo = snapshot.value["photo"] as? String
-            let member = Member(name: name!, photo: photo!)
+            
+            let url = NSURL(string: photo!)
+            let data = NSData(contentsOfURL: url!)
+            let image = UIImage(data: data!)
+            
+            let member = Member(name: name!, photo: image!)
             self.members.append(member)
             self.tableView.reloadData()
         })
