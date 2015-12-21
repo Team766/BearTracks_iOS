@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		34B4FDE7924705282FBC4D8F /* libPods-BearTracksIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C85E844BE8EAF257CEC59969 /* libPods-BearTracksIOS.a */; };
+		A533501B1C2789B400ACFB47 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533501A1C2789B400ACFB47 /* Member.swift */; };
 		A570BD421C1F7D61000AC71F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A570BD401C1F7D61000AC71F /* LoginViewController.swift */; };
 		A5938B811C1E8BCE00F878FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5938B801C1E8BCE00F878FA /* AppDelegate.swift */; };
 		A5938B831C1E8BCE00F878FA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5938B821C1E8BCE00F878FA /* HomeViewController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A533501A1C2789B400ACFB47 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		A55629331C2374D800421A25 /* BearTracksIOS-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BearTracksIOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		A570BD401C1F7D61000AC71F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A5938B7D1C1E8BCE00F878FA /* BearTracks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BearTracks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +110,7 @@
 				A5938B821C1E8BCE00F878FA /* HomeViewController.swift */,
 				A5938B841C1E8BCE00F878FA /* SecondViewController.swift */,
 				A5938B861C1E8BCE00F878FA /* Main.storyboard */,
+				A533501A1C2789B400ACFB47 /* Member.swift */,
 				A5FB7CE91C262DE900A31025 /* MemberTableViewCell.swift */,
 				A5FB7CEB1C26326C00A31025 /* MemberTableViewController.swift */,
 				A5938B891C1E8BCE00F878FA /* Assets.xcassets */,
@@ -293,6 +296,7 @@
 				A5938B851C1E8BCE00F878FA /* SecondViewController.swift in Sources */,
 				A5FB7CEC1C26326C00A31025 /* MemberTableViewController.swift in Sources */,
 				A5938B811C1E8BCE00F878FA /* AppDelegate.swift in Sources */,
+				A533501B1C2789B400ACFB47 /* Member.swift in Sources */,
 				A5938B831C1E8BCE00F878FA /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

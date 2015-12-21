@@ -11,15 +11,14 @@ import UIKit
 class MemberTableViewController: UITableViewController {
     
     //MARK: Properties
+    var members = [Member]()
+    var ref = Firebase(url: "https://beartracks.firebaseio.com/people/")
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        //Load members
+        loadPeople()
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,24 +29,26 @@ class MemberTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return members.count
     }
-
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cellIdentifier = "MemberTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! MemberTableViewCell
+        let member = members[indexPath.row]
+        
+        let url = NSURL(string: member.photo)!
+        let data = NSData(contentsOfURL: url)
 
-        // Configure the cell...
+        cell.memberNameLabel.text = member.name
+        cell.memerPhotoView.image = UIImage(data: data!)
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -93,5 +94,15 @@ class MemberTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func loadPeople(){
+        ref.observeEventType(.ChildAdded, withBlock: { snapshot in
+            let name = snapshot.value["name"] as? String
+            let email = snapshot.value["email"] as? String
+            let photo = snapshot.value["photo"] as? String
+            let member = Member(name: name!, email: email!, photo: photo!)
+            self.members.append(member)
+        })
+    }
 
 }

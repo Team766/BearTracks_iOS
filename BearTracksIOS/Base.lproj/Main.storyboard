@@ -11,7 +11,7 @@
         <!--Home-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="BearTracksIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="BearTracks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -85,13 +85,13 @@
         <!--Roster-->
         <scene sceneID="5mM-Y0-7Si">
             <objects>
-                <tableViewController id="YvM-6y-xVu" sceneMemberID="viewController">
+                <tableViewController id="YvM-6y-xVu" customClass="MemberTableViewController" customModule="BearTracks" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="g5j-Ca-Ktp">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="kzZ-Lf-H1Y" customClass="MemberTableViewCell" customModule="BearTracksIOS" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="kzZ-Lf-H1Y" customClass="MemberTableViewCell" customModule="BearTracks" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kzZ-Lf-H1Y" id="s5M-KW-0h9">
@@ -124,7 +124,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T1W-nr-JYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2330" y="-320"/>
+            <point key="canvasLocation" x="2364" y="-428"/>
         </scene>
         <!--Roles-->
         <scene sceneID="Zx6-WO-mEF">
@@ -146,7 +146,7 @@
         <!--Calendar-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="BearTracksIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="BearTracks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -178,7 +178,7 @@
         <!--Login View Controller-->
         <scene sceneID="DtE-9i-xd4">
             <objects>
-                <viewController id="u2r-II-DLq" customClass="LoginViewController" customModule="BearTracksIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="u2r-II-DLq" customClass="LoginViewController" customModule="BearTracks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Dwy-kP-Oaw"/>
                         <viewControllerLayoutGuide type="bottom" id="Hfv-aW-Lke"/>
