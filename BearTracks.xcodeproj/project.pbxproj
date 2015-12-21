@@ -16,6 +16,8 @@
 		A5938B8A1C1E8BCE00F878FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5938B891C1E8BCE00F878FA /* Assets.xcassets */; };
 		A5938B8D1C1E8BCE00F878FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5938B8B1C1E8BCE00F878FA /* LaunchScreen.storyboard */; };
 		A5938B981C1E8BCE00F878FA /* BearTracksIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5938B971C1E8BCE00F878FA /* BearTracksIOSTests.swift */; };
+		A5FB7CEA1C262DE900A31025 /* MemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FB7CE91C262DE900A31025 /* MemberTableViewCell.swift */; };
+		A5FB7CEC1C26326C00A31025 /* MemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FB7CEB1C26326C00A31025 /* MemberTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		A5938B931C1E8BCE00F878FA /* BearTracksIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BearTracksIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5938B971C1E8BCE00F878FA /* BearTracksIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearTracksIOSTests.swift; sourceTree = "<group>"; };
 		A5938B991C1E8BCE00F878FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5FB7CE91C262DE900A31025 /* MemberTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberTableViewCell.swift; sourceTree = "<group>"; };
+		A5FB7CEB1C26326C00A31025 /* MemberTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberTableViewController.swift; sourceTree = "<group>"; };
 		C85E844BE8EAF257CEC59969 /* libPods-BearTracksIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BearTracksIOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D971F13ADEDA2C33AC8AA01C /* Pods-BearTracksIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BearTracksIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BearTracksIOS/Pods-BearTracksIOS.release.xcconfig"; sourceTree = "<group>"; };
 		ED63C1767CA4B41D270B0A5F /* Pods-BearTracksIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BearTracksIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BearTracksIOS/Pods-BearTracksIOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 				A5938B821C1E8BCE00F878FA /* HomeViewController.swift */,
 				A5938B841C1E8BCE00F878FA /* SecondViewController.swift */,
 				A5938B861C1E8BCE00F878FA /* Main.storyboard */,
+				A5FB7CE91C262DE900A31025 /* MemberTableViewCell.swift */,
+				A5FB7CEB1C26326C00A31025 /* MemberTableViewController.swift */,
 				A5938B891C1E8BCE00F878FA /* Assets.xcassets */,
 				A5938B8B1C1E8BCE00F878FA /* LaunchScreen.storyboard */,
 				A5938B8E1C1E8BCE00F878FA /* Info.plist */,
@@ -190,7 +196,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A5938B781C1E8BCE00F878FA /* Build configuration list for PBXProject "BearTracksIOS" */;
+			buildConfigurationList = A5938B781C1E8BCE00F878FA /* Build configuration list for PBXProject "BearTracks" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -282,8 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5FB7CEA1C262DE900A31025 /* MemberTableViewCell.swift in Sources */,
 				A570BD421C1F7D61000AC71F /* LoginViewController.swift in Sources */,
 				A5938B851C1E8BCE00F878FA /* SecondViewController.swift in Sources */,
+				A5FB7CEC1C26326C00A31025 /* MemberTableViewController.swift in Sources */,
 				A5938B811C1E8BCE00F878FA /* AppDelegate.swift in Sources */,
 				A5938B831C1E8BCE00F878FA /* HomeViewController.swift in Sources */,
 			);
@@ -466,7 +474,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A5938B781C1E8BCE00F878FA /* Build configuration list for PBXProject "BearTracksIOS" */ = {
+		A5938B781C1E8BCE00F878FA /* Build configuration list for PBXProject "BearTracks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A5938B9A1C1E8BCE00F878FA /* Debug */,
