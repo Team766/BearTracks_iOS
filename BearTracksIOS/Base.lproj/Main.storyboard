@@ -113,13 +113,19 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Role" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sz5-5l-eA3">
-                                            <rect key="frame" x="8" y="7" width="592" height="43.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Role" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sz5-5l-eA3">
+                                            <rect key="frame" x="22" y="0.0" width="555" height="59.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="sz5-5l-eA3" firstAttribute="leading" secondItem="Lk5-aw-blp" secondAttribute="leadingMargin" constant="14" id="7fg-W0-DAg"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="sz5-5l-eA3" secondAttribute="bottom" constant="-8" id="dKl-vj-rn3"/>
+                                        <constraint firstItem="sz5-5l-eA3" firstAttribute="top" secondItem="Lk5-aw-blp" secondAttribute="topMargin" constant="-8" id="vdD-tC-81s"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="sz5-5l-eA3" secondAttribute="trailing" constant="15" id="z46-9X-Jgs"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="roleNameLabel" destination="sz5-5l-eA3" id="g93-Fo-7i8"/>
