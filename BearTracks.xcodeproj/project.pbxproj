@@ -15,7 +15,7 @@
 		A570BD421C1F7D61000AC71F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A570BD401C1F7D61000AC71F /* LoginViewController.swift */; };
 		A5938B811C1E8BCE00F878FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5938B801C1E8BCE00F878FA /* AppDelegate.swift */; };
 		A5938B831C1E8BCE00F878FA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5938B821C1E8BCE00F878FA /* HomeViewController.swift */; };
-		A5938B851C1E8BCE00F878FA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5938B841C1E8BCE00F878FA /* SecondViewController.swift */; };
+		A5938B851C1E8BCE00F878FA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5938B841C1E8BCE00F878FA /* ProfileViewController.swift */; };
 		A5938B881C1E8BCE00F878FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5938B861C1E8BCE00F878FA /* Main.storyboard */; };
 		A5938B8A1C1E8BCE00F878FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5938B891C1E8BCE00F878FA /* Assets.xcassets */; };
 		A5938B8D1C1E8BCE00F878FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5938B8B1C1E8BCE00F878FA /* LaunchScreen.storyboard */; };
@@ -44,7 +44,7 @@
 		A5938B7D1C1E8BCE00F878FA /* BearTracks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BearTracks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5938B801C1E8BCE00F878FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5938B821C1E8BCE00F878FA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		A5938B841C1E8BCE00F878FA /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		A5938B841C1E8BCE00F878FA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A5938B871C1E8BCE00F878FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5938B891C1E8BCE00F878FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5938B8C1C1E8BCE00F878FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 				A570BD401C1F7D61000AC71F /* LoginViewController.swift */,
 				A5938B801C1E8BCE00F878FA /* AppDelegate.swift */,
 				A5938B821C1E8BCE00F878FA /* HomeViewController.swift */,
-				A5938B841C1E8BCE00F878FA /* SecondViewController.swift */,
+				A5938B841C1E8BCE00F878FA /* ProfileViewController.swift */,
 				A5938B861C1E8BCE00F878FA /* Main.storyboard */,
 				A533501A1C2789B400ACFB47 /* Member.swift */,
 				A535D7AA1C28D583003A897F /* Role.swift */,
@@ -302,7 +302,7 @@
 			files = (
 				A5FB7CEA1C262DE900A31025 /* MemberTableViewCell.swift in Sources */,
 				A570BD421C1F7D61000AC71F /* LoginViewController.swift in Sources */,
-				A5938B851C1E8BCE00F878FA /* SecondViewController.swift in Sources */,
+				A5938B851C1E8BCE00F878FA /* ProfileViewController.swift in Sources */,
 				A535D7AF1C28D6DA003A897F /* RoleTableViewCell.swift in Sources */,
 				A5FB7CEC1C26326C00A31025 /* MemberTableViewController.swift in Sources */,
 				A5938B811C1E8BCE00F878FA /* AppDelegate.swift in Sources */,

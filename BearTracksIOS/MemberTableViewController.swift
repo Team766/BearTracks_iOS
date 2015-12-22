@@ -47,26 +47,29 @@ class MemberTableViewController: UITableViewController {
         return cell
     }
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let profileViewController = segue.destinationViewController as! ProfileViewController
+        let index = self.tableView.indexPathForSelectedRow!.row
+        let memberChosen = members[index]
+        
+        profileViewController.firebaseKey = memberChosen.key
     }
-    */
+    
+
     
     func loadPeople(){
         ref.observeEventType(.ChildAdded, withBlock: { snapshot in
             let name = snapshot.value["name"] as? String
             let photo = snapshot.value["photo"] as? String
+            let key = snapshot.key
             
             let url = NSURL(string: photo!)
             let data = NSData(contentsOfURL: url!)
             let image = UIImage(data: data!)
             
-            let member = Member(name: name!, photo: image!)
+            let member = Member(name: name!, photo: image!, key: key)
             self.members.append(member)
             self.tableView.reloadData()
         })

@@ -53,6 +53,52 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="UET-DE-JXG">
+            <objects>
+                <viewController id="i2X-nC-J7V" customClass="ProfileViewController" customModule="BearTracks" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NhT-Qf-paC"/>
+                        <viewControllerLayoutGuide type="bottom" id="MAU-qU-W0F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xe3-WV-QSq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_contacts" translatesAutoresizingMaskIntoConstraints="NO" id="jGv-pX-LnP">
+                                <rect key="frame" x="190" y="65" width="220" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="Om2-cL-UK2"/>
+                                    <constraint firstAttribute="width" constant="220" id="gN6-d8-qBe"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="First Last" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raL-fr-2Hj">
+                                <rect key="frame" x="153" y="322" width="295" height="27.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="295" id="3Fr-2T-p7n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="raL-fr-2Hj" firstAttribute="centerX" secondItem="xe3-WV-QSq" secondAttribute="centerX" id="MKu-mk-TjR"/>
+                            <constraint firstItem="jGv-pX-LnP" firstAttribute="centerX" secondItem="xe3-WV-QSq" secondAttribute="centerX" id="Nji-tp-LSf"/>
+                            <constraint firstItem="raL-fr-2Hj" firstAttribute="top" secondItem="jGv-pX-LnP" secondAttribute="bottom" constant="37" id="gAp-rD-Nn1"/>
+                            <constraint firstItem="jGv-pX-LnP" firstAttribute="top" secondItem="NhT-Qf-paC" secondAttribute="bottom" constant="45" id="zh4-lz-rvV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="raL-fr-2Hj" id="0AC-EI-MMf"/>
+                        <outlet property="picImageView" destination="jGv-pX-LnP" id="9so-Hg-jPc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y2c-JH-iaz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2080" y="-999"/>
+        </scene>
         <!--Roster-->
         <scene sceneID="5mM-Y0-7Si">
             <objects>
@@ -83,6 +129,7 @@
                                 <connections>
                                     <outlet property="memberNameLabel" destination="HTH-Wl-Fuj" id="O25-y9-QeI"/>
                                     <outlet property="memerPhotoView" destination="fYb-m7-FsO" id="ouE-Ni-UrO"/>
+                                    <segue destination="i2X-nC-J7V" kind="show" identifier="clickedMember" id="MLG-gN-nfK"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -95,7 +142,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T1W-nr-JYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2324" y="-320"/>
+            <point key="canvasLocation" x="2080" y="-328"/>
         </scene>
         <!--Roles-->
         <scene sceneID="Lim-0J-x9A">
@@ -141,12 +188,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQe-IB-3og" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2364" y="465"/>
+            <point key="canvasLocation" x="2080" y="353"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="BearTracks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -307,7 +354,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Bs-V8-WSf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1498" y="-320"/>
+            <point key="canvasLocation" x="1426" y="-320"/>
         </scene>
         <!--Roles-->
         <scene sceneID="5MX-c1-QFn">
@@ -326,7 +373,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6li-gR-DWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1498" y="431"/>
+            <point key="canvasLocation" x="1426" y="360"/>
         </scene>
     </scenes>
     <resources>
