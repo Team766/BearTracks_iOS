@@ -65,15 +65,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_contacts" translatesAutoresizingMaskIntoConstraints="NO" id="jGv-pX-LnP">
-                                <rect key="frame" x="190" y="65" width="220" height="220"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jGv-pX-LnP">
+                                <rect key="frame" x="190" y="109" width="220" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="Om2-cL-UK2"/>
                                     <constraint firstAttribute="width" constant="220" id="gN6-d8-qBe"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="First Last" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raL-fr-2Hj">
-                                <rect key="frame" x="153" y="322" width="295" height="27.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Last" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raL-fr-2Hj">
+                                <rect key="frame" x="153" y="366" width="295" height="27.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="295" id="3Fr-2T-p7n"/>
                                 </constraints>
@@ -81,16 +81,29 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Email" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5DS-5u-MFk">
+                                <rect key="frame" x="85" y="393.5" width="431" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2JR-vf-OuC"/>
+                                    <constraint firstAttribute="width" constant="431" id="QLr-xu-hgp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="5DS-5u-MFk" firstAttribute="centerX" secondItem="xe3-WV-QSq" secondAttribute="centerX" id="27Z-hm-zHu"/>
                             <constraint firstItem="raL-fr-2Hj" firstAttribute="centerX" secondItem="xe3-WV-QSq" secondAttribute="centerX" id="MKu-mk-TjR"/>
                             <constraint firstItem="jGv-pX-LnP" firstAttribute="centerX" secondItem="xe3-WV-QSq" secondAttribute="centerX" id="Nji-tp-LSf"/>
+                            <constraint firstItem="5DS-5u-MFk" firstAttribute="top" secondItem="raL-fr-2Hj" secondAttribute="bottom" id="fWr-Sh-LDW"/>
                             <constraint firstItem="raL-fr-2Hj" firstAttribute="top" secondItem="jGv-pX-LnP" secondAttribute="bottom" constant="37" id="gAp-rD-Nn1"/>
                             <constraint firstItem="jGv-pX-LnP" firstAttribute="top" secondItem="NhT-Qf-paC" secondAttribute="bottom" constant="45" id="zh4-lz-rvV"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailTextView" destination="5DS-5u-MFk" id="ZPM-Yj-QxL"/>
                         <outlet property="nameLabel" destination="raL-fr-2Hj" id="0AC-EI-MMf"/>
                         <outlet property="picImageView" destination="jGv-pX-LnP" id="9so-Hg-jPc"/>
                     </connections>

@@ -15,6 +15,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
 
     var firebaseKey = ""
+    @IBOutlet weak var emailTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +32,18 @@ class ProfileViewController: UIViewController {
 
     func loadPersonDetails(ref: Firebase){
         ref.observeEventType(.Value, withBlock: { snapshot in
+            self.nameLabel.text = snapshot.value["name"] as? String
+            self.emailTextView.text = snapshot.value["email"] as? String
+            self.emailTextView.dataDetectorTypes = .Link
+            self.emailTextView.editable = false
+            self.emailTextView.selectable = true
+            
             let photo = snapshot.value["photo"] as? String
             let url = NSURL(string: photo!)
             let data = NSData(contentsOfURL: url!)
             let image = UIImage(data: data!)
             
             self.picImageView.image = image
-            self.nameLabel.text = snapshot.value["name"] as? String
         }, withCancelBlock: { error in
             print(error.description)
         })
