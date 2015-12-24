@@ -250,24 +250,47 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maa-c1-AAI">
+                                <rect key="frame" x="40" y="251" width="520" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Accountabilities"/>
+                                <connections>
+                                    <segue destination="7YB-lL-Mh9" kind="show" identifier="Accountabilities" id="Bnp-2O-ocY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJG-Wn-pob">
+                                <rect key="frame" x="40" y="292" width="520" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Authorities"/>
+                                <connections>
+                                    <action selector="auth:" destination="sLx-2L-EAn" eventType="touchUpInside" id="6uF-Ti-APm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="471-H1-vJe" firstAttribute="leading" secondItem="SHf-Wq-2tk" secondAttribute="leadingMargin" constant="20" id="4Mc-Bj-2dw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="471-H1-vJe" secondAttribute="trailing" constant="20" id="4zp-1h-zkm"/>
+                            <constraint firstItem="maa-c1-AAI" firstAttribute="top" secondItem="RFH-aK-c1w" secondAttribute="bottom" constant="25" id="Cvq-zu-Lh2"/>
                             <constraint firstItem="RFH-aK-c1w" firstAttribute="top" secondItem="TRx-Oh-h8q" secondAttribute="bottom" constant="5" id="DZy-fo-bD3"/>
                             <constraint firstItem="RFH-aK-c1w" firstAttribute="leading" secondItem="SHf-Wq-2tk" secondAttribute="leadingMargin" constant="20" id="H9F-Cq-Xel"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bJG-Wn-pob" secondAttribute="trailing" constant="20" id="LCh-zL-6Rk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TRx-Oh-h8q" secondAttribute="trailing" constant="20" id="OFf-8R-4vQ"/>
                             <constraint firstItem="TRx-Oh-h8q" firstAttribute="leading" secondItem="SHf-Wq-2tk" secondAttribute="leadingMargin" constant="20" id="Qsh-7f-IGi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RFH-aK-c1w" secondAttribute="trailing" constant="20" id="V7K-lh-O1x"/>
+                            <constraint firstItem="bJG-Wn-pob" firstAttribute="top" secondItem="maa-c1-AAI" secondAttribute="bottom" constant="5" id="Wve-Nf-8ET"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="maa-c1-AAI" secondAttribute="trailing" constant="20" id="Zkd-8E-WFt"/>
+                            <constraint firstItem="maa-c1-AAI" firstAttribute="leading" secondItem="SHf-Wq-2tk" secondAttribute="leadingMargin" constant="20" id="cMB-ja-kKw"/>
                             <constraint firstItem="VxO-C1-QiY" firstAttribute="top" secondItem="471-H1-vJe" secondAttribute="bottom" constant="35" id="cpF-kS-OZz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VxO-C1-QiY" secondAttribute="trailing" constant="20" id="fQg-j4-9RE"/>
                             <constraint firstItem="TRx-Oh-h8q" firstAttribute="top" secondItem="VxO-C1-QiY" secondAttribute="bottom" constant="5" id="ld5-dn-Idb"/>
+                            <constraint firstItem="bJG-Wn-pob" firstAttribute="leading" secondItem="SHf-Wq-2tk" secondAttribute="leadingMargin" constant="20" id="lzC-qY-5yv"/>
                             <constraint firstItem="471-H1-vJe" firstAttribute="top" secondItem="zKN-wk-ZHn" secondAttribute="bottom" constant="10" id="pTe-2t-QWA"/>
                             <constraint firstItem="VxO-C1-QiY" firstAttribute="leading" secondItem="SHf-Wq-2tk" secondAttribute="leadingMargin" constant="20" id="vgR-wx-sHW"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="accountabilityButton" destination="maa-c1-AAI" id="4Ef-3B-rIk"/>
                         <outlet property="creatorLabel" destination="VxO-C1-QiY" id="G3e-Kn-oRd"/>
                         <outlet property="ownerLabel" destination="TRx-Oh-h8q" id="cCM-rE-SUn"/>
                         <outlet property="roleTitle" destination="471-H1-vJe" id="v47-8B-rcC"/>
@@ -277,6 +300,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xX6-D6-WHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2828" y="360"/>
+        </scene>
+        <!--Accountability Table View Controller-->
+        <scene sceneID="PBf-3N-wXf">
+            <objects>
+                <tableViewController id="7YB-lL-Mh9" customClass="AccountabilityTableViewController" customModule="BearTracks" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="0EU-Ss-hhY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BasicTableViewCell" rowHeight="90" id="f9q-dm-psG" customClass="BasicTableViewCell" customModule="BearTracks" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f9q-dm-psG" id="Kct-fZ-xtq">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accountability" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Z72-d2-qNQ">
+                                            <rect key="frame" x="28" y="0.0" width="544" height="89.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Z72-d2-qNQ" firstAttribute="top" secondItem="Kct-fZ-xtq" secondAttribute="topMargin" constant="-8" id="4bC-WC-jEa"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Z72-d2-qNQ" secondAttribute="trailing" constant="20" id="PED-lv-OPP"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Z72-d2-qNQ" secondAttribute="bottom" constant="-8" id="qjE-AS-MX4"/>
+                                        <constraint firstItem="Z72-d2-qNQ" firstAttribute="leading" secondItem="Kct-fZ-xtq" secondAttribute="leadingMargin" constant="20" id="r3R-hl-e2z"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="Z72-d2-qNQ" id="V7f-9W-LFL"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7YB-lL-Mh9" id="dNH-KS-8oE"/>
+                            <outlet property="delegate" destination="7YB-lL-Mh9" id="Q2y-94-TWc"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6js-Wk-5zj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2775" y="1083"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="wg7-f3-ORb">

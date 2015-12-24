@@ -15,14 +15,16 @@ class RoleDetailViewController: UIViewController {
     @IBOutlet weak var creatorLabel: UILabel!
     @IBOutlet weak var ownerLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var accountabilityButton: UIButton!
+    @IBOutlet weak var authorityButton: UIButton!
     
     let peopleRef = Firebase(url: "https://beartracks.firebaseio.com/people")
+    var roleRef = Firebase(url: "https://beartracks.firebaseio.com/roles")
     var firebaseKey = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
  
-        var roleRef: Firebase
         roleRef = Firebase(url: "https://beartracks.firebaseio.com/roles").childByAppendingPath(firebaseKey)
         loadRoleDetails(roleRef)
     }
@@ -66,4 +68,20 @@ class RoleDetailViewController: UIViewController {
         })
     }
     
+    //MARK: Actions
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "Accountabilities"){
+            let accountabilityList = segue.destinationViewController as! AccountabilityTableViewController
+            accountabilityList.refURL = "https://beartracks.firebaseio.com/roles/" + firebaseKey + "/accountabilities"
+        }
+    }
+    
+    @IBAction func acnt(sender: AnyObject) {
+        self.performSegueWithIdentifier("Accountabilities", sender: sender)
+    }
+    
+    @IBAction func auth(sender: AnyObject) {
+        //self.performSegueWithIdentifier("Accountabilities", sender: sender)
+    }
 }
