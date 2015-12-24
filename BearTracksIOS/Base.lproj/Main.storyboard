@@ -117,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y2c-JH-iaz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2080" y="-999"/>
+            <point key="canvasLocation" x="2892" y="-1031"/>
         </scene>
         <!--Roster-->
         <scene sceneID="5mM-Y0-7Si">
@@ -196,6 +196,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="roleNameLabel" destination="sz5-5l-eA3" id="g93-Fo-7i8"/>
+                                    <segue destination="sLx-2L-EAn" kind="show" id="pFE-sp-y2I"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -209,6 +210,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQe-IB-3og" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2080" y="353"/>
+        </scene>
+        <!--Role Detail View Controller-->
+        <scene sceneID="AcC-dg-1X0">
+            <objects>
+                <viewController id="sLx-2L-EAn" customClass="RoleDetailViewController" customModule="BearTracks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zKN-wk-ZHn"/>
+                        <viewControllerLayoutGuide type="bottom" id="W4r-f4-Vxa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SHf-Wq-2tk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="471-H1-vJe">
+                                <rect key="frame" x="130" y="74" width="341" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="341" id="544-ZS-25H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="471-H1-vJe" firstAttribute="centerX" secondItem="SHf-Wq-2tk" secondAttribute="centerX" id="bTa-C9-I8Y"/>
+                            <constraint firstItem="471-H1-vJe" firstAttribute="top" secondItem="zKN-wk-ZHn" secondAttribute="bottom" constant="10" id="pTe-2t-QWA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="roleTitle" destination="471-H1-vJe" id="v47-8B-rcC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xX6-D6-WHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2828" y="360"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="wg7-f3-ORb">
@@ -315,8 +352,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="bz8-bK-No1" firstAttribute="top" secondItem="Dwy-kP-Oaw" secondAttribute="bottom" constant="230" id="GmS-cr-w45"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uMf-Eq-5po" secondAttribute="trailing" id="NaA-Dj-FCR"/>
+                            <constraint firstItem="Hfv-aW-Lke" firstAttribute="top" secondItem="bz8-bK-No1" secondAttribute="bottom" constant="219" id="Tfh-yW-UZ1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1EV-SK-guU" secondAttribute="trailing" constant="10" id="XCI-Cn-p6W"/>
                             <constraint firstItem="uMf-Eq-5po" firstAttribute="top" secondItem="Dwy-kP-Oaw" secondAttribute="bottom" constant="60" id="dGQ-8U-7aF"/>
                             <constraint firstItem="1EV-SK-guU" firstAttribute="leading" secondItem="U2W-Wu-1eN" secondAttribute="leadingMargin" constant="10" id="lgf-sN-keK"/>

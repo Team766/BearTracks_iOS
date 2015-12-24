@@ -11,8 +11,10 @@ import Foundation
 class Role{
 
     let name: String
+    let key: String
     
-    init(name: String){
+    init(name: String, key:String){
         self.name = name
+        self.key = key
     }
 }
