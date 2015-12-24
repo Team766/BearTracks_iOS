@@ -33,12 +33,12 @@ class FirstViewController: UIViewController {
 
     @IBAction func logoutAction(sender: UIBarButtonItem) {
         let confirmAlert = UIAlertController(title: "Confirm", message: "Are you sure you want to logout?", preferredStyle: UIAlertControllerStyle.Alert)
+        confirmAlert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: {action in
+            confirmAlert.dismissViewControllerAnimated(false, completion: nil)
+        }))
         confirmAlert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default, handler: {action in
             NSUserDefaults.standardUserDefaults().setBool(false, forKey: "didLogin")
             self.dismissViewControllerAnimated(true, completion: nil)
-        }))
-        confirmAlert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: {action in
-            confirmAlert.dismissViewControllerAnimated(false, completion: nil)
         }))
         self.presentViewController(confirmAlert, animated: true, completion: nil)
     }
