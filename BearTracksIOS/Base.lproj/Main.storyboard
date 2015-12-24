@@ -264,6 +264,7 @@
                                 <state key="normal" title="Authorities"/>
                                 <connections>
                                     <action selector="auth:" destination="sLx-2L-EAn" eventType="touchUpInside" id="6uF-Ti-APm"/>
+                                    <segue destination="CM5-ef-a2A" kind="show" id="36e-GI-WdN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -345,6 +346,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6js-Wk-5zj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2775" y="1083"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="23O-mU-L4h">
+            <objects>
+                <tableViewController id="CM5-ef-a2A" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tGp-3u-6ED">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Po8-qc-WOL">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Po8-qc-WOL" id="ZKW-se-IQ0">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CM5-ef-a2A" id="YMt-EV-Lyb"/>
+                            <outlet property="delegate" destination="CM5-ef-a2A" id="EEa-59-FMp"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z8s-tw-ICB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3546" y="784"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="wg7-f3-ORb">

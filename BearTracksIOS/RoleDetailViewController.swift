@@ -78,10 +78,8 @@ class RoleDetailViewController: UIViewController {
     }
     
     @IBAction func acnt(sender: AnyObject) {
-        self.performSegueWithIdentifier("Accountabilities", sender: sender)
     }
     
     @IBAction func auth(sender: AnyObject) {
-        //self.performSegueWithIdentifier("Accountabilities", sender: sender)
     }
 }
