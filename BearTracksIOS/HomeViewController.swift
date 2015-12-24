@@ -11,6 +11,7 @@ import UIKit
 class FirstViewController: UIViewController {
 
     @IBOutlet var homeImage: UIImageView!
+    @IBOutlet weak var logoutButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,5 +31,16 @@ class FirstViewController: UIViewController {
         UIApplication.sharedApplication().openURL(NSURL(string: "http://www.team766.com")!)
     }
 
+    @IBAction func logoutAction(sender: UIBarButtonItem) {
+        let confirmAlert = UIAlertController(title: "Confirm", message: "Are you sure you want to logout?", preferredStyle: UIAlertControllerStyle.Alert)
+        confirmAlert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default, handler: {action in
+            NSUserDefaults.standardUserDefaults().setBool(false, forKey: "didLogin")
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }))
+        confirmAlert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: {action in
+            confirmAlert.dismissViewControllerAnimated(false, completion: nil)
+        }))
+        self.presentViewController(confirmAlert, animated: true, completion: nil)
+    }
 }
 
