@@ -264,7 +264,7 @@
                                 <state key="normal" title="Authorities"/>
                                 <connections>
                                     <action selector="auth:" destination="sLx-2L-EAn" eventType="touchUpInside" id="6uF-Ti-APm"/>
-                                    <segue destination="CM5-ef-a2A" kind="show" id="36e-GI-WdN"/>
+                                    <segue destination="CM5-ef-a2A" kind="show" identifier="Authorities" id="36e-GI-WdN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -347,22 +347,39 @@
             </objects>
             <point key="canvasLocation" x="2775" y="1083"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Authority Table View Controller-->
         <scene sceneID="23O-mU-L4h">
             <objects>
-                <tableViewController id="CM5-ef-a2A" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tGp-3u-6ED">
+                <tableViewController id="CM5-ef-a2A" customClass="AuthorityTableViewController" customModule="BearTracks" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="tGp-3u-6ED">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Po8-qc-WOL">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuthorityTableViewCell" id="Po8-qc-WOL" customClass="AuthorityTableViewCell" customModule="BearTracks" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Po8-qc-WOL" id="ZKW-se-IQ0">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euF-ow-HR9">
+                                            <rect key="frame" x="28" y="0.0" width="544" height="59.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="euF-ow-HR9" secondAttribute="trailing" constant="20" id="B75-il-T7I"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="euF-ow-HR9" secondAttribute="bottom" constant="-8" id="FWJ-Oe-UPu"/>
+                                        <constraint firstItem="euF-ow-HR9" firstAttribute="leading" secondItem="ZKW-se-IQ0" secondAttribute="leadingMargin" constant="20" id="Ick-ge-ZXP"/>
+                                        <constraint firstItem="euF-ow-HR9" firstAttribute="top" secondItem="ZKW-se-IQ0" secondAttribute="topMargin" constant="-8" id="JdQ-Oc-hRE"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="euF-ow-HR9" id="U37-Lp-FOK"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

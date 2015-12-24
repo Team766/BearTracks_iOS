@@ -74,6 +74,9 @@ class RoleDetailViewController: UIViewController {
         if(segue.identifier == "Accountabilities"){
             let accountabilityList = segue.destinationViewController as! AccountabilityTableViewController
             accountabilityList.refURL = "https://beartracks.firebaseio.com/roles/" + firebaseKey + "/accountabilities"
+        }else if(segue.identifier == "Authorities"){
+            let authorityList = segue.destinationViewController as! AuthorityTableViewController
+            authorityList.refURL = "https://beartracks.firebaseio.com/roles/" + firebaseKey + "/authorities"
         }
     }
     
