@@ -209,7 +209,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQe-IB-3og" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2080" y="353"/>
+            <point key="canvasLocation" x="2892" y="353"/>
         </scene>
         <!--Role Detail View Controller-->
         <scene sceneID="AcC-dg-1X0">
@@ -313,7 +313,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xX6-D6-WHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2828" y="360"/>
+            <point key="canvasLocation" x="3640" y="360"/>
         </scene>
         <!--Attachments Table View Controller-->
         <scene sceneID="Xeb-gZ-0zi">
@@ -358,7 +358,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ZZ-8M-20K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3494" y="360"/>
+            <point key="canvasLocation" x="4306" y="360"/>
         </scene>
         <!--Accountability Table View Controller-->
         <scene sceneID="PBf-3N-wXf">
@@ -462,17 +462,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="December, 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfY-2M-wuQ">
-                                <rect key="frame" x="226" y="28" width="148" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="sLY-3h-jqX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IIm-fd-BKj" customClass="CVCalendarMenuView" customModule="CVCalendar">
-                                <rect key="frame" x="20" y="70" width="560" height="24"/>
+                                <rect key="frame" x="20" y="74" width="560" height="24"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="ST9-CG-e4g"/>
@@ -482,7 +473,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOU-q8-eZV" customClass="CVCalendarView" customModule="CVCalendar">
-                                <rect key="frame" x="20" y="102" width="560" height="300"/>
+                                <rect key="frame" x="20" y="106" width="560" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="2J2-zP-3SB"/>
@@ -495,28 +486,37 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="sfY-2M-wuQ" firstAttribute="centerX" secondItem="IIm-fd-BKj" secondAttribute="centerX" id="1Rq-Yg-qtZ"/>
                             <constraint firstItem="cOU-q8-eZV" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="9uV-o9-uDo"/>
                             <constraint firstItem="IIm-fd-BKj" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="EbC-xY-DIX"/>
-                            <constraint firstItem="sfY-2M-wuQ" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" id="Fzm-pG-dFg"/>
                             <constraint firstItem="cOU-q8-eZV" firstAttribute="centerX" secondItem="IIm-fd-BKj" secondAttribute="centerX" id="Qtp-WC-h2g"/>
                             <constraint firstItem="cOU-q8-eZV" firstAttribute="top" secondItem="IIm-fd-BKj" secondAttribute="bottom" constant="8" id="X2S-Pv-Q1D"/>
                             <constraint firstItem="IIm-fd-BKj" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="X6N-iy-cqK"/>
-                            <constraint firstItem="IIm-fd-BKj" firstAttribute="top" secondItem="sfY-2M-wuQ" secondAttribute="bottom" constant="8" id="dyF-hi-SD5"/>
                             <constraint firstItem="cOU-q8-eZV" firstAttribute="trailing" secondItem="IIm-fd-BKj" secondAttribute="trailing" id="fWm-OG-M5Q"/>
-                            <constraint firstItem="sfY-2M-wuQ" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="wJa-qD-cQ6"/>
+                            <constraint firstItem="IIm-fd-BKj" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="10" id="hug-PF-uPV"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calendar" image="ic_today" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" title="Calendar" id="jS8-1P-GN4">
+                        <barButtonItem key="leftBarButtonItem" title="Week" id="U22-NM-6Zv">
+                            <connections>
+                                <action selector="toggleView:" destination="8rJ-Kc-sve" id="2we-sh-hb2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Today" id="F8W-mm-aL9">
+                            <connections>
+                                <action selector="todayToggle:" destination="8rJ-Kc-sve" id="vxw-eb-0kG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="calendarView" destination="cOU-q8-eZV" id="h3h-XA-7Kr"/>
                         <outlet property="menuView" destination="IIm-fd-BKj" id="AXA-jc-G4V"/>
-                        <outlet property="monthLabel" destination="sfY-2M-wuQ" id="GxJ-gW-WoN"/>
+                        <outlet property="monthName" destination="jS8-1P-GN4" id="SIe-fV-qNq"/>
+                        <outlet property="toggleViewButton" destination="U22-NM-6Zv" id="3Pi-mc-eO0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="1562" y="360"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="DtE-9i-xd4">
@@ -624,7 +624,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="cWE-a4-zEd" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="LaR-Ue-3lW" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="zyW-Dj-6Zs" kind="relationship" relationship="viewControllers" id="sr1-e3-JBw"/>
                         <segue destination="LI0-T1-CNP" kind="relationship" relationship="viewControllers" id="jcq-83-CET"/>
                     </connections>
@@ -669,7 +669,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6li-gR-DWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1426" y="360"/>
+            <point key="canvasLocation" x="2238" y="360"/>
         </scene>
         <!--Home-->
         <scene sceneID="UW3-Ph-I0E">
@@ -689,6 +689,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8F-Ip-TnW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="DOC-tU-SVA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LaR-Ue-3lW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Calendar" image="ic_today" id="cPa-gy-q4n"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hb6-V7-06Y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="HVu-B3-NU9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XWa-0b-eFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="360"/>
         </scene>
     </scenes>
     <resources>

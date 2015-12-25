@@ -8,18 +8,23 @@
 
 import UIKit
 import CVCalendar
+import Firebase
 
 class CalendarViewController: UIViewController, CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
     
-    
+    @IBOutlet weak var toggleViewButton: UIBarButtonItem!
+    @IBOutlet weak var monthName: UINavigationItem!
     @IBOutlet weak var menuView: CVCalendarMenuView!
     @IBOutlet weak var calendarView: CVCalendarView!
-    @IBOutlet weak var monthLabel: UILabel!
+    
+    var selectedDay:DayView!
+    var calendarRef = Firebase(url: "https://beartracks.firebaseio.com/calendarEvents")
+    var events = [CalendarEvent]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        monthLabel.text = CVDate(date: NSDate()).globalDescription
+        monthName.title = CVDate(date: NSDate()).globalDescription
+        getEvents()
     }
     
     override func viewDidLayoutSubviews() {
@@ -37,4 +42,86 @@ class CalendarViewController: UIViewController, CVCalendarViewDelegate, CVCalend
         return .Sunday
     }
     
+    func presentedDateUpdated(date: Date) {
+        self.monthName.title = date.globalDescription
+    }
+    
+    func getEvents(){
+        calendarRef.observeEventType(.ChildAdded, withBlock: {snapshot in
+            let start = snapshot.value["start"] as? Double
+            let end = snapshot.value["end"] as? Double
+            let location = snapshot.value["location"] as? String
+            let title = snapshot.value["title"] as? String
+            let event = CalendarEvent(start: start!, end: end!, location: location!, title: title!)
+            self.events.append(event)
+        })
+    }
+    
+    
+    //MARK: Dot marker to show events
+    
+    func dotMarker(shouldShowOnDayView dayView: CVCalendarDayView) -> Bool {
+        let month = dayView.date.month
+        
+        for event in events{
+            let convertDate = CVDate(date: event.startDate)
+            if(month == convertDate.month){
+                if(dayView.date.day == convertDate.day){
+                    print(event.title)
+                    return true
+                }
+            }
+        }
+        
+        return false
+    }
+    
+    func dotMarker(colorOnDayView dayView: CVCalendarDayView) -> [UIColor] {
+        let red = CGFloat(204)
+        let green = CGFloat(0)
+        let blue = CGFloat(0)
+        
+        let color = UIColor(red: red, green: green, blue: blue, alpha: 1)
+        
+        let numberOfEvents = 2
+        switch(numberOfEvents) {
+        case 2:
+            return [color, color]
+        case 3:
+            return [color, color, color]
+        default:
+            return [color] // return 1 dot
+        }
+    }
+    
+    func dotMarker(shouldMoveOnHighlightingOnDayView dayView: CVCalendarDayView) -> Bool {
+        return true
+    }
+    
+    func dotMarker(sizeOnDayView dayView: DayView) -> CGFloat {
+        return 13
+    }
+    
+    //MARK: When a day is selected
+    
+    func didSelectDayView(dayView: CVCalendarDayView, animationDidFinish: Bool) {
+        selectedDay = dayView
+    }
+    
+    //MARK: IB Actions
+    
+    @IBAction func toggleView(sender: AnyObject) {
+        if(calendarView.calendarMode == .MonthView){
+            calendarView.changeMode(.WeekView)
+            toggleViewButton.title = "Month"
+        }else{
+            calendarView.changeMode(.MonthView)
+            toggleViewButton.title = "Week"
+        }
+    }
+    
+    @IBAction func todayToggle(sender: AnyObject) {
+        self.calendarView.toggleCurrentDayView()
+    }
+
 }
