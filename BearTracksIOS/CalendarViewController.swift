@@ -54,6 +54,7 @@ class CalendarViewController: UIViewController, CVCalendarViewDelegate, CVCalend
             let title = snapshot.value["title"] as? String
             let event = CalendarEvent(start: start!, end: end!, location: location!, title: title!)
             self.events.append(event)
+            self.calendarView.contentController.refreshPresentedMonth()
         })
     }
     
@@ -67,12 +68,10 @@ class CalendarViewController: UIViewController, CVCalendarViewDelegate, CVCalend
             let convertDate = CVDate(date: event.startDate)
             if(month == convertDate.month){
                 if(dayView.date.day == convertDate.day){
-                    print(event.title)
                     return true
                 }
             }
         }
-        
         return false
     }
     
