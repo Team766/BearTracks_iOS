@@ -44,6 +44,7 @@ class CalendarViewController: UIViewController, CVCalendarViewDelegate, CVCalend
     
     func presentedDateUpdated(date: Date) {
         self.monthName.title = date.globalDescription
+        self.calendarView.contentController.refreshPresentedMonth()
     }
     
     func getEvents(){
@@ -57,6 +58,7 @@ class CalendarViewController: UIViewController, CVCalendarViewDelegate, CVCalend
             self.calendarView.contentController.refreshPresentedMonth()
         })
     }
+    
     
     
     //MARK: Dot marker to show events
@@ -82,15 +84,7 @@ class CalendarViewController: UIViewController, CVCalendarViewDelegate, CVCalend
         
         let color = UIColor(red: red, green: green, blue: blue, alpha: 1)
         
-        let numberOfEvents = 2
-        switch(numberOfEvents) {
-        case 2:
-            return [color, color]
-        case 3:
-            return [color, color, color]
-        default:
-            return [color] // return 1 dot
-        }
+        return [color]
     }
     
     func dotMarker(shouldMoveOnHighlightingOnDayView dayView: CVCalendarDayView) -> Bool {
@@ -98,7 +92,7 @@ class CalendarViewController: UIViewController, CVCalendarViewDelegate, CVCalend
     }
     
     func dotMarker(sizeOnDayView dayView: DayView) -> CGFloat {
-        return 13
+        return 15
     }
     
     //MARK: When a day is selected
