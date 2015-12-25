@@ -82,3 +82,14 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-BearTracksIOS/CVCalendar.framework"
+  install_framework "Pods-BearTracksIOS/Firebase.framework"
+  install_framework "Pods-BearTracksIOS/Toast.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-BearTracksIOS/CVCalendar.framework"
+  install_framework "Pods-BearTracksIOS/Firebase.framework"
+  install_framework "Pods-BearTracksIOS/Toast.framework"
+fi

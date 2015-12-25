@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class AttachmentsTableViewController: UITableViewController {
     
@@ -54,9 +55,11 @@ class AttachmentsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let attachment = attachments[indexPath.row]
-        let url = attachment.url
-        UIApplication.sharedApplication().openURL(NSURL(string: url)!)
+        if(attachments.count != 0){
+            let attachment = attachments[indexPath.row]
+            let url = attachment.url
+            UIApplication.sharedApplication().openURL(NSURL(string: url)!)
+        }
     }
 
     func populateCells(ref: Firebase){

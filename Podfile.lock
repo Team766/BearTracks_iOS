@@ -1,12 +1,15 @@
 PODS:
+  - CVCalendar (1.2.8)
   - Firebase (2.4.3)
   - Toast (3.0)
 
 DEPENDENCIES:
+  - CVCalendar (~> 1.2.8)
   - Firebase (>= 2.4.3)
   - Toast (~> 3.0)
 
 SPEC CHECKSUMS:
+  CVCalendar: b7eda65b57b7ca6efae7c3d123a163882b3a3595
   Firebase: 48179995b561e2262c5d4060ecdffca45fbbff8b
   Toast: 32c59229abfcf41850162b83bb9259dc84372473
 

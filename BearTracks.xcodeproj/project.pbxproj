@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		34B4FDE7924705282FBC4D8F /* libPods-BearTracksIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C85E844BE8EAF257CEC59969 /* libPods-BearTracksIOS.a */; };
+		28455030890F20D39CACF0EC /* Pods_BearTracksIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE71EBD149AE65824300343 /* Pods_BearTracksIOS.framework */; };
 		A50DB49E1C2C676C00CA4C47 /* RoleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50DB49D1C2C676C00CA4C47 /* RoleDetailViewController.swift */; };
 		A50DB4A01C2C85C600CA4C47 /* AccountabilityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50DB49F1C2C85C600CA4C47 /* AccountabilityTableViewController.swift */; };
 		A50DB4A21C2C8CA200CA4C47 /* BasicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50DB4A11C2C8CA200CA4C47 /* BasicTableViewCell.swift */; };
@@ -16,6 +16,7 @@
 		A50DB4B21C2CC49E00CA4C47 /* AttachmentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50DB4B11C2CC49E00CA4C47 /* AttachmentsTableViewController.swift */; };
 		A50DB4B41C2CC4B300CA4C47 /* AttachmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50DB4B31C2CC4B300CA4C47 /* AttachmentTableViewCell.swift */; };
 		A50DB4B61C2CC77C00CA4C47 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50DB4B51C2CC77C00CA4C47 /* Attachment.swift */; };
+		A50DB4BC1C2CDCCC00CA4C47 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50DB4BB1C2CDCCC00CA4C47 /* CalendarViewController.swift */; };
 		A533501B1C2789B400ACFB47 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533501A1C2789B400ACFB47 /* Member.swift */; };
 		A535D7AB1C28D583003A897F /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = A535D7AA1C28D583003A897F /* Role.swift */; };
 		A535D7AD1C28D63D003A897F /* RoleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A535D7AC1C28D63D003A897F /* RoleTableViewController.swift */; };
@@ -51,6 +52,7 @@
 		A50DB4B11C2CC49E00CA4C47 /* AttachmentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentsTableViewController.swift; sourceTree = "<group>"; };
 		A50DB4B31C2CC4B300CA4C47 /* AttachmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentTableViewCell.swift; sourceTree = "<group>"; };
 		A50DB4B51C2CC77C00CA4C47 /* Attachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
+		A50DB4BB1C2CDCCC00CA4C47 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		A533501A1C2789B400ACFB47 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		A535D7AA1C28D583003A897F /* Role.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
 		A535D7AC1C28D63D003A897F /* RoleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleTableViewController.swift; sourceTree = "<group>"; };
@@ -70,8 +72,8 @@
 		A5938B991C1E8BCE00F878FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5FB7CE91C262DE900A31025 /* MemberTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberTableViewCell.swift; sourceTree = "<group>"; };
 		A5FB7CEB1C26326C00A31025 /* MemberTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberTableViewController.swift; sourceTree = "<group>"; };
-		C85E844BE8EAF257CEC59969 /* libPods-BearTracksIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BearTracksIOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D971F13ADEDA2C33AC8AA01C /* Pods-BearTracksIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BearTracksIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BearTracksIOS/Pods-BearTracksIOS.release.xcconfig"; sourceTree = "<group>"; };
+		ECE71EBD149AE65824300343 /* Pods_BearTracksIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BearTracksIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED63C1767CA4B41D270B0A5F /* Pods-BearTracksIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BearTracksIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BearTracksIOS/Pods-BearTracksIOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34B4FDE7924705282FBC4D8F /* libPods-BearTracksIOS.a in Frameworks */,
+				28455030890F20D39CACF0EC /* Pods_BearTracksIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +132,7 @@
 				A5938B801C1E8BCE00F878FA /* AppDelegate.swift */,
 				A5938B821C1E8BCE00F878FA /* HomeViewController.swift */,
 				A5938B841C1E8BCE00F878FA /* ProfileViewController.swift */,
+				A50DB4BB1C2CDCCC00CA4C47 /* CalendarViewController.swift */,
 				A5938B861C1E8BCE00F878FA /* Main.storyboard */,
 				A533501A1C2789B400ACFB47 /* Member.swift */,
 				A535D7AA1C28D583003A897F /* Role.swift */,
@@ -165,7 +168,7 @@
 		B5C347CD1FE1B3AF7F28D65D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C85E844BE8EAF257CEC59969 /* libPods-BearTracksIOS.a */,
+				ECE71EBD149AE65824300343 /* Pods_BearTracksIOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				A50DB4AC1C2CBA5F00CA4C47 /* AuthorityTableViewCell.swift in Sources */,
 				A535D7AF1C28D6DA003A897F /* RoleTableViewCell.swift in Sources */,
 				A50DB4A21C2C8CA200CA4C47 /* BasicTableViewCell.swift in Sources */,
+				A50DB4BC1C2CDCCC00CA4C47 /* CalendarViewController.swift in Sources */,
 				A50DB4B61C2CC77C00CA4C47 /* Attachment.swift in Sources */,
 				A5FB7CEC1C26326C00A31025 /* MemberTableViewController.swift in Sources */,
 				A5938B811C1E8BCE00F878FA /* AppDelegate.swift in Sources */,

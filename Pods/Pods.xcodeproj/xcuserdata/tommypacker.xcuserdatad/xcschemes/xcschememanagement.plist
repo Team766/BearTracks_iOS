@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CVCalendar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Firebase.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2E7787C43BE74908EB4F9E0346C1EB25</key>
+		<key>3EB6E45DCD253B8AC1A45F547A38AF11</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>569735B422E0E4CEEFC5C6955AFDE3A5</key>
+		<key>B7AC9326D819482593FE118E915409D7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CB6A2034B79BEF6E17C69E0EC677D57F</key>
+		<key>BA14B622689766F6B8A4F42FD9DE552F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C43704C31E1049E8EC93226078D48931</key>
 		<dict>
 			<key>primary</key>
 			<true/>

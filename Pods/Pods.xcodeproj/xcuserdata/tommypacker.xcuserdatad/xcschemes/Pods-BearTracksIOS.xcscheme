@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B94CB722D0057E4C048CE9A8'
+               BlueprintIdentifier = 'C470E267E83CD9FACEA92362'
                BlueprintName = 'Pods-BearTracksIOS'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-BearTracksIOS.a'>
+               BuildableName = 'Pods_BearTracksIOS.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
