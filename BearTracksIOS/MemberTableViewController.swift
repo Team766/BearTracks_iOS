@@ -46,6 +46,7 @@ class MemberTableViewController: UITableViewController {
 
         return cell
     }
+    
 
     // MARK: - Navigation
 
@@ -56,8 +57,6 @@ class MemberTableViewController: UITableViewController {
         
         profileViewController.firebaseKey = memberChosen.key
     }
-    
-
     
     func loadPeople(){
         ref.observeEventType(.ChildAdded, withBlock: { snapshot in

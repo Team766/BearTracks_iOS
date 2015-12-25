@@ -17,6 +17,7 @@ class RoleDetailViewController: UIViewController {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var accountabilityButton: UIButton!
     @IBOutlet weak var authorityButton: UIButton!
+    @IBOutlet weak var attachmentButton: UIButton!
     
     let peopleRef = Firebase(url: "https://beartracks.firebaseio.com/people")
     var roleRef = Firebase(url: "https://beartracks.firebaseio.com/roles")
@@ -77,12 +78,16 @@ class RoleDetailViewController: UIViewController {
         }else if(segue.identifier == "Authorities"){
             let authorityList = segue.destinationViewController as! AuthorityTableViewController
             authorityList.refURL = "https://beartracks.firebaseio.com/roles/" + firebaseKey + "/authorities"
+        }else if(segue.identifier == "Attachments"){
+            let attachmentList = segue.destinationViewController as! AttachmentsTableViewController
+            attachmentList.refURL = "https://beartracks.firebaseio.com/roles/" + firebaseKey + "/attachments"
         }
     }
     
     @IBAction func acnt(sender: AnyObject) {
     }
-    
     @IBAction func auth(sender: AnyObject) {
+    }
+    @IBAction func attach(sender: AnyObject) {
     }
 }

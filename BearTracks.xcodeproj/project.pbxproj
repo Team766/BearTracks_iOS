@@ -13,6 +13,9 @@
 		A50DB4A21C2C8CA200CA4C47 /* BasicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50DB4A11C2C8CA200CA4C47 /* BasicTableViewCell.swift */; };
 		A50DB4AC1C2CBA5F00CA4C47 /* AuthorityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50DB4AB1C2CBA5F00CA4C47 /* AuthorityTableViewCell.swift */; };
 		A50DB4B01C2CBACE00CA4C47 /* AuthorityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50DB4AF1C2CBACE00CA4C47 /* AuthorityTableViewController.swift */; };
+		A50DB4B21C2CC49E00CA4C47 /* AttachmentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50DB4B11C2CC49E00CA4C47 /* AttachmentsTableViewController.swift */; };
+		A50DB4B41C2CC4B300CA4C47 /* AttachmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50DB4B31C2CC4B300CA4C47 /* AttachmentTableViewCell.swift */; };
+		A50DB4B61C2CC77C00CA4C47 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50DB4B51C2CC77C00CA4C47 /* Attachment.swift */; };
 		A533501B1C2789B400ACFB47 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533501A1C2789B400ACFB47 /* Member.swift */; };
 		A535D7AB1C28D583003A897F /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = A535D7AA1C28D583003A897F /* Role.swift */; };
 		A535D7AD1C28D63D003A897F /* RoleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A535D7AC1C28D63D003A897F /* RoleTableViewController.swift */; };
@@ -45,6 +48,9 @@
 		A50DB4A11C2C8CA200CA4C47 /* BasicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicTableViewCell.swift; sourceTree = "<group>"; };
 		A50DB4AB1C2CBA5F00CA4C47 /* AuthorityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorityTableViewCell.swift; sourceTree = "<group>"; };
 		A50DB4AF1C2CBACE00CA4C47 /* AuthorityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorityTableViewController.swift; sourceTree = "<group>"; };
+		A50DB4B11C2CC49E00CA4C47 /* AttachmentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentsTableViewController.swift; sourceTree = "<group>"; };
+		A50DB4B31C2CC4B300CA4C47 /* AttachmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentTableViewCell.swift; sourceTree = "<group>"; };
+		A50DB4B51C2CC77C00CA4C47 /* Attachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
 		A533501A1C2789B400ACFB47 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		A535D7AA1C28D583003A897F /* Role.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
 		A535D7AC1C28D63D003A897F /* RoleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleTableViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				A5938B7F1C1E8BCE00F878FA /* BearTracksIOS */,
-				A5938B961C1E8BCE00F878FA /* BearTracksIOSTests */,
 				A5938B7E1C1E8BCE00F878FA /* Products */,
 				B5C347CD1FE1B3AF7F28D65D /* Frameworks */,
 				8DE7C3FCBB839478D263EA8E /* Pods */,
@@ -128,6 +133,7 @@
 				A5938B861C1E8BCE00F878FA /* Main.storyboard */,
 				A533501A1C2789B400ACFB47 /* Member.swift */,
 				A535D7AA1C28D583003A897F /* Role.swift */,
+				A50DB4B51C2CC77C00CA4C47 /* Attachment.swift */,
 				A5FB7CE91C262DE900A31025 /* MemberTableViewCell.swift */,
 				A535D7AE1C28D6DA003A897F /* RoleTableViewCell.swift */,
 				A5FB7CEB1C26326C00A31025 /* MemberTableViewController.swift */,
@@ -135,8 +141,11 @@
 				A50DB49D1C2C676C00CA4C47 /* RoleDetailViewController.swift */,
 				A50DB49F1C2C85C600CA4C47 /* AccountabilityTableViewController.swift */,
 				A50DB4AF1C2CBACE00CA4C47 /* AuthorityTableViewController.swift */,
+				A50DB4B11C2CC49E00CA4C47 /* AttachmentsTableViewController.swift */,
 				A50DB4A11C2C8CA200CA4C47 /* BasicTableViewCell.swift */,
 				A50DB4AB1C2CBA5F00CA4C47 /* AuthorityTableViewCell.swift */,
+				A50DB4B31C2CC4B300CA4C47 /* AttachmentTableViewCell.swift */,
+				A5938B961C1E8BCE00F878FA /* BearTracksIOSTests */,
 				A5938B891C1E8BCE00F878FA /* Assets.xcassets */,
 				A5938B8B1C1E8BCE00F878FA /* LaunchScreen.storyboard */,
 				A5938B8E1C1E8BCE00F878FA /* Info.plist */,
@@ -151,7 +160,7 @@
 				A5938B991C1E8BCE00F878FA /* Info.plist */,
 			);
 			path = BearTracksIOSTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		B5C347CD1FE1B3AF7F28D65D /* Frameworks */ = {
 			isa = PBXGroup;
@@ -317,6 +326,7 @@
 			files = (
 				A50DB49E1C2C676C00CA4C47 /* RoleDetailViewController.swift in Sources */,
 				A5FB7CEA1C262DE900A31025 /* MemberTableViewCell.swift in Sources */,
+				A50DB4B21C2CC49E00CA4C47 /* AttachmentsTableViewController.swift in Sources */,
 				A570BD421C1F7D61000AC71F /* LoginViewController.swift in Sources */,
 				A5938B851C1E8BCE00F878FA /* ProfileViewController.swift in Sources */,
 				A50DB4A01C2C85C600CA4C47 /* AccountabilityTableViewController.swift in Sources */,
@@ -324,8 +334,10 @@
 				A50DB4AC1C2CBA5F00CA4C47 /* AuthorityTableViewCell.swift in Sources */,
 				A535D7AF1C28D6DA003A897F /* RoleTableViewCell.swift in Sources */,
 				A50DB4A21C2C8CA200CA4C47 /* BasicTableViewCell.swift in Sources */,
+				A50DB4B61C2CC77C00CA4C47 /* Attachment.swift in Sources */,
 				A5FB7CEC1C26326C00A31025 /* MemberTableViewController.swift in Sources */,
 				A5938B811C1E8BCE00F878FA /* AppDelegate.swift in Sources */,
+				A50DB4B41C2CC4B300CA4C47 /* AttachmentTableViewCell.swift in Sources */,
 				A533501B1C2789B400ACFB47 /* Member.swift in Sources */,
 				A5938B831C1E8BCE00F878FA /* HomeViewController.swift in Sources */,
 				A535D7AD1C28D63D003A897F /* RoleTableViewController.swift in Sources */,

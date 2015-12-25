@@ -251,7 +251,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maa-c1-AAI">
-                                <rect key="frame" x="40" y="251" width="520" height="36"/>
+                                <rect key="frame" x="40" y="261" width="520" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Accountabilities"/>
                                 <connections>
@@ -259,7 +259,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJG-Wn-pob">
-                                <rect key="frame" x="40" y="292" width="520" height="36"/>
+                                <rect key="frame" x="40" y="302" width="520" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Authorities"/>
                                 <connections>
@@ -267,17 +267,28 @@
                                     <segue destination="CM5-ef-a2A" kind="show" identifier="Authorities" id="36e-GI-WdN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0T-mE-MW6">
+                                <rect key="frame" x="40" y="343" width="520" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Attachments"/>
+                                <connections>
+                                    <action selector="attach:" destination="sLx-2L-EAn" eventType="touchUpInside" id="kGC-my-age"/>
+                                    <segue destination="q6W-KD-1Pi" kind="show" identifier="Attachments" id="8rn-Pv-8YQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="471-H1-vJe" firstAttribute="leading" secondItem="SHf-Wq-2tk" secondAttribute="leadingMargin" constant="20" id="4Mc-Bj-2dw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="471-H1-vJe" secondAttribute="trailing" constant="20" id="4zp-1h-zkm"/>
-                            <constraint firstItem="maa-c1-AAI" firstAttribute="top" secondItem="RFH-aK-c1w" secondAttribute="bottom" constant="25" id="Cvq-zu-Lh2"/>
+                            <constraint firstItem="maa-c1-AAI" firstAttribute="top" secondItem="RFH-aK-c1w" secondAttribute="bottom" constant="35" id="Cvq-zu-Lh2"/>
                             <constraint firstItem="RFH-aK-c1w" firstAttribute="top" secondItem="TRx-Oh-h8q" secondAttribute="bottom" constant="5" id="DZy-fo-bD3"/>
+                            <constraint firstItem="W0T-mE-MW6" firstAttribute="top" secondItem="bJG-Wn-pob" secondAttribute="bottom" constant="5" id="EEk-yC-apg"/>
                             <constraint firstItem="RFH-aK-c1w" firstAttribute="leading" secondItem="SHf-Wq-2tk" secondAttribute="leadingMargin" constant="20" id="H9F-Cq-Xel"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bJG-Wn-pob" secondAttribute="trailing" constant="20" id="LCh-zL-6Rk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TRx-Oh-h8q" secondAttribute="trailing" constant="20" id="OFf-8R-4vQ"/>
                             <constraint firstItem="TRx-Oh-h8q" firstAttribute="leading" secondItem="SHf-Wq-2tk" secondAttribute="leadingMargin" constant="20" id="Qsh-7f-IGi"/>
+                            <constraint firstItem="W0T-mE-MW6" firstAttribute="leading" secondItem="SHf-Wq-2tk" secondAttribute="leadingMargin" constant="20" id="UkF-73-uth"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RFH-aK-c1w" secondAttribute="trailing" constant="20" id="V7K-lh-O1x"/>
                             <constraint firstItem="bJG-Wn-pob" firstAttribute="top" secondItem="maa-c1-AAI" secondAttribute="bottom" constant="5" id="Wve-Nf-8ET"/>
                             <constraint firstAttribute="trailingMargin" secondItem="maa-c1-AAI" secondAttribute="trailing" constant="20" id="Zkd-8E-WFt"/>
@@ -286,12 +297,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="VxO-C1-QiY" secondAttribute="trailing" constant="20" id="fQg-j4-9RE"/>
                             <constraint firstItem="TRx-Oh-h8q" firstAttribute="top" secondItem="VxO-C1-QiY" secondAttribute="bottom" constant="5" id="ld5-dn-Idb"/>
                             <constraint firstItem="bJG-Wn-pob" firstAttribute="leading" secondItem="SHf-Wq-2tk" secondAttribute="leadingMargin" constant="20" id="lzC-qY-5yv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W0T-mE-MW6" secondAttribute="trailing" constant="20" id="pEn-9r-bQ6"/>
                             <constraint firstItem="471-H1-vJe" firstAttribute="top" secondItem="zKN-wk-ZHn" secondAttribute="bottom" constant="10" id="pTe-2t-QWA"/>
                             <constraint firstItem="VxO-C1-QiY" firstAttribute="leading" secondItem="SHf-Wq-2tk" secondAttribute="leadingMargin" constant="20" id="vgR-wx-sHW"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="accountabilityButton" destination="maa-c1-AAI" id="4Ef-3B-rIk"/>
+                        <outlet property="attachmentButton" destination="W0T-mE-MW6" id="WcU-kT-MxA"/>
                         <outlet property="creatorLabel" destination="VxO-C1-QiY" id="G3e-Kn-oRd"/>
                         <outlet property="ownerLabel" destination="TRx-Oh-h8q" id="cCM-rE-SUn"/>
                         <outlet property="roleTitle" destination="471-H1-vJe" id="v47-8B-rcC"/>
@@ -301,6 +314,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xX6-D6-WHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2828" y="360"/>
+        </scene>
+        <!--Attachments Table View Controller-->
+        <scene sceneID="Xeb-gZ-0zi">
+            <objects>
+                <tableViewController id="q6W-KD-1Pi" customClass="AttachmentsTableViewController" customModule="BearTracks" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="dLh-iU-4LA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AttachmentTableViewCell" id="8B3-fE-Gfa" customClass="AttachmentTableViewCell" customModule="BearTracks" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8B3-fE-Gfa" id="0xm-qO-esX">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attachment" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hh-NH-4iC">
+                                            <rect key="frame" x="28" y="0.0" width="544" height="59.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="2hh-NH-4iC" secondAttribute="bottom" constant="-8" id="6ut-cF-xOp"/>
+                                        <constraint firstItem="2hh-NH-4iC" firstAttribute="top" secondItem="0xm-qO-esX" secondAttribute="topMargin" constant="-8" id="DvH-FD-n7Q"/>
+                                        <constraint firstItem="2hh-NH-4iC" firstAttribute="leading" secondItem="0xm-qO-esX" secondAttribute="leadingMargin" constant="20" id="uo8-g6-RgA"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="2hh-NH-4iC" secondAttribute="trailing" constant="20" id="xLY-ZR-RMo"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="attachmentName" destination="2hh-NH-4iC" id="Kdg-Nf-nHh"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="q6W-KD-1Pi" id="hRY-sh-hss"/>
+                            <outlet property="delegate" destination="q6W-KD-1Pi" id="UwQ-OT-dJA"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ZZ-8M-20K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3494" y="360"/>
         </scene>
         <!--Accountability Table View Controller-->
         <scene sceneID="PBf-3N-wXf">
@@ -390,7 +448,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z8s-tw-ICB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3546" y="784"/>
+            <point key="canvasLocation" x="3424" y="1108"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="wg7-f3-ORb">

@@ -58,9 +58,7 @@ class AuthorityTableViewController: UITableViewController {
 
     func populateCells(ref: Firebase){
         ref.observeEventType(.ChildAdded, withBlock: {snapshot in
-            if(snapshot.exists()){
-                self.descriptions.append((snapshot.value["description"] as? String)!)
-            }
+            self.descriptions.append((snapshot.value["description"] as? String)!)
             self.tableView.reloadData()
         })
     }

@@ -1,5 +1,5 @@
 //
-//  AccountabilityTableViewController.swift
+//  AttachmentsTableViewController.swift
 //  BearTracks
 //
 //  Created by Tommy Yu on 12/24/15.
@@ -8,16 +8,14 @@
 
 import UIKit
 
-class AccountabilityTableViewController: UITableViewController {
+class AttachmentsTableViewController: UITableViewController {
     
     var refURL = ""
-    var descriptions = [String]()
+    var attachments = [Attachment]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        var ref: Firebase
-        ref = Firebase(url: refURL)
+        let ref = Firebase(url: refURL)
         populateCells(ref)
     }
 
@@ -35,34 +33,40 @@ class AccountabilityTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if(descriptions.count != 0){
-            return descriptions.count
+        if(attachments.count != 0){
+            return attachments.count
         }else{
             return 1
         }
     }
 
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cellIdentifier = "BasicTableViewCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! BasicTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("AttachmentTableViewCell", forIndexPath: indexPath) as! AttachmentTableViewCell
         
-        if(descriptions.count != 0){
-            let name = descriptions[indexPath.row]
-            cell.nameLabel.text = name
+        if(attachments.count != 0){
+            let attachment = attachments[indexPath.row]
+            cell.attachmentName.text = attachment.name
         }else{
-            cell.nameLabel.text = "There are no accounabilities for this role"
+            cell.attachmentName.text = "No attachments"
         }
 
         return cell
     }
-
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let attachment = attachments[indexPath.row]
+        let url = attachment.url
+        UIApplication.sharedApplication().openURL(NSURL(string: url)!)
+    }
+
     func populateCells(ref: Firebase){
         ref.observeEventType(.ChildAdded, withBlock: {snapshot in
-            let description = snapshot.value["description"] as? String
-            self.descriptions.append(description!)
+            let name = snapshot.value["name"] as? String
+            let url = snapshot.value["url"] as? String
+            let attachment = Attachment(name: name!, url: url!)
+            self.attachments.append(attachment)
             self.tableView.reloadData()
         })
     }
+    
 }
