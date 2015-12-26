@@ -14,12 +14,20 @@ class MemberTableViewController: UITableViewController {
     //MARK: Properties
     var members = [Member]()
     var ref = Firebase(url: "https://beartracks.firebaseio.com/people/")
+    var indicator: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         //Load members
         loadPeople()
+        indicator.frame = CGRectMake(0.0, 0.0, 40.0, 40.0);
+        indicator.center = view.center
+        view.addSubview(indicator)
+        indicator.bringSubviewToFront(view)
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        indicator.startAnimating()
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,6 +38,7 @@ class MemberTableViewController: UITableViewController {
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         ref.removeAllObservers()
+        self.indicator.stopAnimating()
     }
 
     // MARK: - Table view data source
@@ -77,6 +86,8 @@ class MemberTableViewController: UITableViewController {
             let member = Member(name: name!, photo: image!, key: key)
             self.members.append(member)
             self.tableView.reloadData()
+            self.indicator.stopAnimating()
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         })
     }
 

@@ -21,8 +21,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         if NSUserDefaults.standardUserDefaults().boolForKey("didLogin") {
             // Terms have been accepted, proceed as normal
             self.performSegueWithIdentifier("loggedIn", sender: nil)
-        } else {
-            // Terms have not been accepted. Show terms (perhaps using performSegueWithIdentifier)
         }
     }
     
@@ -31,8 +29,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
 
         usernameTextField.delegate = self
         passwordTextField.delegate = self
-        
         passwordTextField.secureTextEntry = true
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:"dismissKeyboard:")
+        self.view.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    func dismissKeyboard(gesture: UIGestureRecognizer){
+        usernameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,11 +71,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         let passWord = passwordTextField.text
         ref.authUser(userName!, password: passWord!,
             withCompletionBlock: {error, authData in
-                if error != nil{
-                    self.view.makeToast("Please enter valid credentials")
-                }else{
+                if error == nil{
                     self.performSegueWithIdentifier("loggedIn", sender: nil)
                     NSUserDefaults.standardUserDefaults().setBool(true, forKey: "didLogin")
+
+                }else{
+                    self.view.makeToast("Please enter valid credentials")
                 }
         })
     }

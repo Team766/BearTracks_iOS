@@ -24,11 +24,19 @@ class RoleDetailViewController: UIViewController {
     var roleRef = Firebase(url: "https://beartracks.firebaseio.com/roles")
     var firebaseKey = ""
     
+    var indicator: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
  
         roleRef = Firebase(url: "https://beartracks.firebaseio.com/roles").childByAppendingPath(firebaseKey)
         loadRoleDetails(roleRef)
+        indicator.frame = CGRectMake(0.0, 0.0, 40.0, 40.0);
+        indicator.center = view.center
+        view.addSubview(indicator)
+        indicator.bringSubviewToFront(view)
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        indicator.startAnimating()
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,6 +63,8 @@ class RoleDetailViewController: UIViewController {
             }
             let status = snapshot.value["status"] as? String
             self.statusLabel.text = "Status:  " + status!
+            self.indicator.stopAnimating()
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         })
     }
     

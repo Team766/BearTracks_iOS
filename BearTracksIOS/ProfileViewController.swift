@@ -15,9 +15,11 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var picImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
 
-    var firebaseKey = ""
     @IBOutlet weak var emailTextView: UITextView!
     @IBOutlet weak var phoneTextView: UITextView!
+    
+    var firebaseKey = ""
+    var indicator: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,12 @@ class ProfileViewController: UIViewController {
         var ref: Firebase
         ref = Firebase(url: "https://beartracks.firebaseio.com/people").childByAppendingPath(firebaseKey)
         loadPersonDetails(ref)
+        indicator.frame = CGRectMake(0.0, 0.0, 40.0, 40.0);
+        indicator.center = view.center
+        view.addSubview(indicator)
+        indicator.bringSubviewToFront(view)
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        indicator.startAnimating()
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,6 +66,8 @@ class ProfileViewController: UIViewController {
             let image = UIImage(data: data!)
             
             self.picImageView.image = image
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            self.indicator.stopAnimating()
         }, withCancelBlock: { error in
             print(error.description)
         })

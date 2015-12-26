@@ -134,8 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				A55629331C2374D800421A25 /* BearTracksIOS-Bridging-Header.h */,
-				A570BD401C1F7D61000AC71F /* LoginViewController.swift */,
 				A5938B801C1E8BCE00F878FA /* AppDelegate.swift */,
+				A570BD401C1F7D61000AC71F /* LoginViewController.swift */,
 				A5938B821C1E8BCE00F878FA /* HomeViewController.swift */,
 				A5938B841C1E8BCE00F878FA /* ProfileViewController.swift */,
 				A50DB4BB1C2CDCCC00CA4C47 /* CalendarViewController.swift */,
