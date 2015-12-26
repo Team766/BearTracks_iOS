@@ -20,6 +20,7 @@ class CalendarViewController: UIViewController, CVCalendarViewDelegate, CVCalend
     var selectedDay:DayView!
     var calendarRef = Firebase(url: "https://beartracks.firebaseio.com/calendarEvents")
     var events = [CalendarEvent]()
+    var eventsOnDay = [CalendarEvent]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,7 @@ class CalendarViewController: UIViewController, CVCalendarViewDelegate, CVCalend
         
         calendarView.commitCalendarViewUpdate()
         menuView.commitMenuViewUpdate()
+        eventsOnDay.removeAll()
     }
     
     func presentationMode() -> CalendarMode {
@@ -45,6 +47,7 @@ class CalendarViewController: UIViewController, CVCalendarViewDelegate, CVCalend
     func presentedDateUpdated(date: Date) {
         self.monthName.title = date.globalDescription
         self.calendarView.contentController.refreshPresentedMonth()
+        eventsOnDay.removeAll()
     }
     
     func getEvents(){
@@ -58,8 +61,6 @@ class CalendarViewController: UIViewController, CVCalendarViewDelegate, CVCalend
             self.calendarView.contentController.refreshPresentedMonth()
         })
     }
-    
-    
     
     //MARK: Dot marker to show events
     
@@ -97,8 +98,25 @@ class CalendarViewController: UIViewController, CVCalendarViewDelegate, CVCalend
     
     //MARK: When a day is selected
     
+    //Jank af
     func didSelectDayView(dayView: CVCalendarDayView, animationDidFinish: Bool) {
         selectedDay = dayView
+        eventsOnDay.removeAll()
+        let monthCheck = dayView.date.month
+        let dayCheck = dayView.date.day
+        for event in events{
+            if(CVDate(date: event.startDate).day == dayCheck && CVDate(date: event.startDate).month == monthCheck){
+                eventsOnDay.append(event)
+            }
+        }
+        if(eventsOnDay.count != 0){
+            self.performSegueWithIdentifier("CalendarEventClick", sender: nil)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let calendarEvents = segue.destinationViewController as! CalendarTableViewController
+        calendarEvents.events = eventsOnDay
     }
     
     //MARK: IB Actions

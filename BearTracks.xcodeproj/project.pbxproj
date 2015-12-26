@@ -22,6 +22,8 @@
 		A535D7AD1C28D63D003A897F /* RoleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A535D7AC1C28D63D003A897F /* RoleTableViewController.swift */; };
 		A535D7AF1C28D6DA003A897F /* RoleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A535D7AE1C28D6DA003A897F /* RoleTableViewCell.swift */; };
 		A54C127C1C2DC1E10085C3F1 /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54C127B1C2DC1E10085C3F1 /* CalendarEvent.swift */; };
+		A54C127E1C2E0D7A0085C3F1 /* CalendarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54C127D1C2E0D7A0085C3F1 /* CalendarTableViewController.swift */; };
+		A54C12801C2E13680085C3F1 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54C127F1C2E13680085C3F1 /* CalendarTableViewCell.swift */; };
 		A570BD421C1F7D61000AC71F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A570BD401C1F7D61000AC71F /* LoginViewController.swift */; };
 		A5938B811C1E8BCE00F878FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5938B801C1E8BCE00F878FA /* AppDelegate.swift */; };
 		A5938B831C1E8BCE00F878FA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5938B821C1E8BCE00F878FA /* HomeViewController.swift */; };
@@ -59,6 +61,8 @@
 		A535D7AC1C28D63D003A897F /* RoleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleTableViewController.swift; sourceTree = "<group>"; };
 		A535D7AE1C28D6DA003A897F /* RoleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleTableViewCell.swift; sourceTree = "<group>"; };
 		A54C127B1C2DC1E10085C3F1 /* CalendarEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarEvent.swift; sourceTree = "<group>"; };
+		A54C127D1C2E0D7A0085C3F1 /* CalendarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTableViewController.swift; sourceTree = "<group>"; };
+		A54C127F1C2E13680085C3F1 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		A55629331C2374D800421A25 /* BearTracksIOS-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BearTracksIOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		A570BD401C1F7D61000AC71F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A5938B7D1C1E8BCE00F878FA /* BearTracks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BearTracks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,7 +139,9 @@
 				A5938B821C1E8BCE00F878FA /* HomeViewController.swift */,
 				A5938B841C1E8BCE00F878FA /* ProfileViewController.swift */,
 				A50DB4BB1C2CDCCC00CA4C47 /* CalendarViewController.swift */,
+				A54C127F1C2E13680085C3F1 /* CalendarTableViewCell.swift */,
 				A54C127B1C2DC1E10085C3F1 /* CalendarEvent.swift */,
+				A54C127D1C2E0D7A0085C3F1 /* CalendarTableViewController.swift */,
 				A5938B861C1E8BCE00F878FA /* Main.storyboard */,
 				A533501A1C2789B400ACFB47 /* Member.swift */,
 				A535D7AA1C28D583003A897F /* Role.swift */,
@@ -347,7 +353,9 @@
 				A5938B811C1E8BCE00F878FA /* AppDelegate.swift in Sources */,
 				A50DB4B41C2CC4B300CA4C47 /* AttachmentTableViewCell.swift in Sources */,
 				A533501B1C2789B400ACFB47 /* Member.swift in Sources */,
+				A54C127E1C2E0D7A0085C3F1 /* CalendarTableViewController.swift in Sources */,
 				A5938B831C1E8BCE00F878FA /* HomeViewController.swift in Sources */,
+				A54C12801C2E13680085C3F1 /* CalendarTableViewCell.swift in Sources */,
 				A535D7AD1C28D63D003A897F /* RoleTableViewController.swift in Sources */,
 				A535D7AB1C28D583003A897F /* Role.swift in Sources */,
 			);

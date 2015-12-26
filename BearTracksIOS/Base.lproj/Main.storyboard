@@ -512,11 +512,66 @@
                         <outlet property="menuView" destination="IIm-fd-BKj" id="AXA-jc-G4V"/>
                         <outlet property="monthName" destination="jS8-1P-GN4" id="SIe-fV-qNq"/>
                         <outlet property="toggleViewButton" destination="U22-NM-6Zv" id="3Pi-mc-eO0"/>
+                        <segue destination="D1o-M4-BPe" kind="show" identifier="CalendarEventClick" id="svZ-Ud-HJu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1562" y="360"/>
+        </scene>
+        <!--Calendar Table View Controller-->
+        <scene sceneID="CCd-Vb-FgT">
+            <objects>
+                <tableViewController id="D1o-M4-BPe" customClass="CalendarTableViewController" customModule="BearTracks" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="XbG-HJ-k5B">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CalendarTableViewCell" id="HtQ-90-2dq" customClass="CalendarTableViewCell" customModule="BearTracks" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HtQ-90-2dq" id="F2d-v9-jHX">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title + Location" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ox0-Vk-D3H">
+                                            <rect key="frame" x="8" y="8" width="584" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StartTime - EndTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ng-Pe-hB8">
+                                            <rect key="frame" x="8" y="61" width="584" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="2Ng-Pe-hB8" secondAttribute="bottom" id="3vC-xm-Sx3"/>
+                                        <constraint firstItem="2Ng-Pe-hB8" firstAttribute="leading" secondItem="F2d-v9-jHX" secondAttribute="leadingMargin" id="GRd-EY-gy6"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ox0-Vk-D3H" secondAttribute="trailing" id="MWb-F9-77m"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="2Ng-Pe-hB8" secondAttribute="trailing" id="eDS-zk-lbk"/>
+                                        <constraint firstItem="ox0-Vk-D3H" firstAttribute="top" secondItem="F2d-v9-jHX" secondAttribute="topMargin" id="i9F-0n-HCG"/>
+                                        <constraint firstItem="ox0-Vk-D3H" firstAttribute="leading" secondItem="F2d-v9-jHX" secondAttribute="leadingMargin" id="tsp-v2-uBF"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="timeLabel" destination="2Ng-Pe-hB8" id="zj8-dZ-Qry"/>
+                                    <outlet property="titleLabel" destination="ox0-Vk-D3H" id="PAu-Tm-ptQ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="D1o-M4-BPe" id="x0C-x5-joH"/>
+                            <outlet property="delegate" destination="D1o-M4-BPe" id="YKI-cE-KA2"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="07M-bV-bzw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1562" y="1078"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="DtE-9i-xd4">
