@@ -22,11 +22,6 @@ class AuthorityTableViewController: UITableViewController {
         self.populateCells(ref)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -50,8 +45,10 @@ class AuthorityTableViewController: UITableViewController {
         if(descriptions.count != 0){
             let name = descriptions[indexPath.row]
             cell.nameLabel.text = name
+            self.tableView.userInteractionEnabled = true
         }else{
             cell.nameLabel.text = "There are no authorities for this role"
+            self.tableView.userInteractionEnabled = false
         }
 
         return cell

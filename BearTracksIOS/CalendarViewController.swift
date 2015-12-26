@@ -36,6 +36,11 @@ class CalendarViewController: UIViewController, CVCalendarViewDelegate, CVCalend
         eventsOnDay.removeAll()
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        calendarRef.removeAllObservers()
+    }
+    
     func presentationMode() -> CalendarMode {
         return .MonthView
     }
@@ -98,7 +103,7 @@ class CalendarViewController: UIViewController, CVCalendarViewDelegate, CVCalend
     
     //MARK: When a day is selected
     
-    //Jank af
+    //Jank af.... although O(N) is better than O(N^2) if we used a dictionary for events
     func didSelectDayView(dayView: CVCalendarDayView, animationDidFinish: Bool) {
         selectedDay = dayView
         eventsOnDay.removeAll()

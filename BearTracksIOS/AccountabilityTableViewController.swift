@@ -30,12 +30,10 @@ class AccountabilityTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         if(descriptions.count != 0){
             return descriptions.count
         }else{
@@ -51,7 +49,9 @@ class AccountabilityTableViewController: UITableViewController {
         if(descriptions.count != 0){
             let name = descriptions[indexPath.row]
             cell.nameLabel.text = name
+            self.tableView.userInteractionEnabled = true
         }else{
+            self.tableView.userInteractionEnabled = false
             cell.nameLabel.text = "There are no accounabilities for this role"
         }
 

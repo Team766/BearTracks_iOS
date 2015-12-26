@@ -40,6 +40,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        ref.removeAllObservers()
+    }
     
     //MARK: UITextFieldDelegate:
     func textFieldShouldReturn(textField: UITextField) -> Bool {

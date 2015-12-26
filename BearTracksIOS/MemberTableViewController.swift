@@ -26,6 +26,11 @@ class MemberTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        ref.removeAllObservers()
+    }
 
     // MARK: - Table view data source
 

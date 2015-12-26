@@ -17,6 +17,7 @@ class ProfileViewController: UIViewController {
 
     var firebaseKey = ""
     @IBOutlet weak var emailTextView: UITextView!
+    @IBOutlet weak var phoneTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,18 @@ class ProfileViewController: UIViewController {
             self.emailTextView.dataDetectorTypes = .Link
             self.emailTextView.editable = false
             self.emailTextView.selectable = true
+            
+            let phoneNumber = snapshot.value["phone"] as? String
+            if((phoneNumber?.isEmpty) != nil){
+                self.phoneTextView.text = phoneNumber
+                self.phoneTextView.dataDetectorTypes = .PhoneNumber
+                self.phoneTextView.editable = false
+                self.phoneTextView.selectable = true
+            }else{
+                self.phoneTextView.text = ""
+                self.phoneTextView.editable = false
+                self.phoneTextView.selectable = false
+            }
             
             let photo = snapshot.value["photo"] as? String
             let url = NSURL(string: photo!)

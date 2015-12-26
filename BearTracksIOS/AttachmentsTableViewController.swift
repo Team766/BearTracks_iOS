@@ -28,12 +28,10 @@ class AttachmentsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         if(attachments.count != 0){
             return attachments.count
         }else{
@@ -47,8 +45,10 @@ class AttachmentsTableViewController: UITableViewController {
         if(attachments.count != 0){
             let attachment = attachments[indexPath.row]
             cell.attachmentName.text = attachment.name
+            self.tableView.userInteractionEnabled = true
         }else{
             cell.attachmentName.text = "No attachments"
+            self.tableView.userInteractionEnabled = false
         }
 
         return cell

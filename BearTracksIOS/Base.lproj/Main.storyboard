@@ -79,7 +79,7 @@
                                     <constraint firstAttribute="width" constant="220" id="gN6-d8-qBe"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Last" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raL-fr-2Hj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 766" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raL-fr-2Hj">
                                 <rect key="frame" x="153" y="366" width="295" height="27.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="295" id="3Fr-2T-p7n"/>
@@ -89,11 +89,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Email" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5DS-5u-MFk">
-                                <rect key="frame" x="85" y="393.5" width="431" height="30"/>
+                                <rect key="frame" x="20" y="393" width="560" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2JR-vf-OuC"/>
-                                    <constraint firstAttribute="width" constant="431" id="QLr-xu-hgp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Phone" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GvY-j8-vro">
+                                <rect key="frame" x="20" y="423" width="560" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="t5Z-Ek-Fgb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -102,16 +110,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5DS-5u-MFk" firstAttribute="centerX" secondItem="xe3-WV-QSq" secondAttribute="centerX" id="27Z-hm-zHu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GvY-j8-vro" secondAttribute="trailing" id="GlP-7i-liC"/>
                             <constraint firstItem="raL-fr-2Hj" firstAttribute="centerX" secondItem="xe3-WV-QSq" secondAttribute="centerX" id="MKu-mk-TjR"/>
                             <constraint firstItem="jGv-pX-LnP" firstAttribute="centerX" secondItem="xe3-WV-QSq" secondAttribute="centerX" id="Nji-tp-LSf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5DS-5u-MFk" secondAttribute="trailing" id="b8d-ko-sE7"/>
+                            <constraint firstItem="GvY-j8-vro" firstAttribute="leading" secondItem="xe3-WV-QSq" secondAttribute="leadingMargin" id="djA-xa-TCl"/>
                             <constraint firstItem="5DS-5u-MFk" firstAttribute="top" secondItem="raL-fr-2Hj" secondAttribute="bottom" id="fWr-Sh-LDW"/>
                             <constraint firstItem="raL-fr-2Hj" firstAttribute="top" secondItem="jGv-pX-LnP" secondAttribute="bottom" constant="37" id="gAp-rD-Nn1"/>
+                            <constraint firstItem="GvY-j8-vro" firstAttribute="top" secondItem="5DS-5u-MFk" secondAttribute="bottom" id="mts-mL-nk5"/>
+                            <constraint firstItem="5DS-5u-MFk" firstAttribute="leading" secondItem="xe3-WV-QSq" secondAttribute="leadingMargin" id="t9h-vA-3aU"/>
                             <constraint firstItem="jGv-pX-LnP" firstAttribute="top" secondItem="NhT-Qf-paC" secondAttribute="bottom" constant="45" id="zh4-lz-rvV"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailTextView" destination="5DS-5u-MFk" id="ZPM-Yj-QxL"/>
                         <outlet property="nameLabel" destination="raL-fr-2Hj" id="0AC-EI-MMf"/>
+                        <outlet property="phoneTextView" destination="GvY-j8-vro" id="6tm-lU-ems"/>
                         <outlet property="picImageView" destination="jGv-pX-LnP" id="9so-Hg-jPc"/>
                     </connections>
                 </viewController>
@@ -319,21 +333,21 @@
         <scene sceneID="Xeb-gZ-0zi">
             <objects>
                 <tableViewController id="q6W-KD-1Pi" customClass="AttachmentsTableViewController" customModule="BearTracks" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="dLh-iU-4LA">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="dLh-iU-4LA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AttachmentTableViewCell" id="8B3-fE-Gfa" customClass="AttachmentTableViewCell" customModule="BearTracks" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="60"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8B3-fE-Gfa" id="0xm-qO-esX">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="74.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attachment" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hh-NH-4iC">
-                                            <rect key="frame" x="28" y="0.0" width="544" height="59.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attachment" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="2hh-NH-4iC">
+                                            <rect key="frame" x="28" y="0.0" width="544" height="74.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -364,21 +378,21 @@
         <scene sceneID="PBf-3N-wXf">
             <objects>
                 <tableViewController id="7YB-lL-Mh9" customClass="AccountabilityTableViewController" customModule="BearTracks" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="0EU-Ss-hhY">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" id="0EU-Ss-hhY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BasicTableViewCell" rowHeight="90" id="f9q-dm-psG" customClass="BasicTableViewCell" customModule="BearTracks" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="90"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BasicTableViewCell" rowHeight="75" id="f9q-dm-psG" customClass="BasicTableViewCell" customModule="BearTracks" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f9q-dm-psG" id="Kct-fZ-xtq">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="74.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accountability" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Z72-d2-qNQ">
-                                            <rect key="frame" x="28" y="0.0" width="544" height="89.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accountability" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Z72-d2-qNQ">
+                                            <rect key="frame" x="28" y="0.0" width="544" height="74.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -409,21 +423,21 @@
         <scene sceneID="23O-mU-L4h">
             <objects>
                 <tableViewController id="CM5-ef-a2A" customClass="AuthorityTableViewController" customModule="BearTracks" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="tGp-3u-6ED">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="tGp-3u-6ED">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuthorityTableViewCell" id="Po8-qc-WOL" customClass="AuthorityTableViewCell" customModule="BearTracks" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="60"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Po8-qc-WOL" id="ZKW-se-IQ0">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="74.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authority" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="euF-ow-HR9">
-                                            <rect key="frame" x="28" y="0.0" width="544" height="59.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authority" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="euF-ow-HR9">
+                                            <rect key="frame" x="28" y="0.0" width="544" height="74.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -523,16 +537,16 @@
         <scene sceneID="CCd-Vb-FgT">
             <objects>
                 <tableViewController id="D1o-M4-BPe" customClass="CalendarTableViewController" customModule="BearTracks" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="XbG-HJ-k5B">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="XbG-HJ-k5B">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CalendarTableViewCell" id="HtQ-90-2dq" customClass="CalendarTableViewCell" customModule="BearTracks" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="90"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HtQ-90-2dq" id="F2d-v9-jHX">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title + Location" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ox0-Vk-D3H">
@@ -542,7 +556,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StartTime - EndTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ng-Pe-hB8">
-                                            <rect key="frame" x="8" y="61" width="584" height="20.5"/>
+                                            <rect key="frame" x="8" y="51" width="584" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>

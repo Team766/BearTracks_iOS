@@ -36,6 +36,12 @@ class RoleDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        peopleRef.removeAllObservers()
+        roleRef.removeAllObservers()
+    }
+    
     func loadRoleDetails(ref: Firebase){
         ref.observeEventType(.Value, withBlock: { snapshot in
             self.roleTitle.text = snapshot.value["name"] as? String

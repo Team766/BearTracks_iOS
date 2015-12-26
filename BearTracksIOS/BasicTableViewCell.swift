@@ -16,6 +16,7 @@ class BasicTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        nameLabel.adjustsFontSizeToFitWidth = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
