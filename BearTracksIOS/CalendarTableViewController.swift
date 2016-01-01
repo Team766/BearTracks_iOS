@@ -15,6 +15,7 @@ class CalendarTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.userInteractionEnabled = false
+        events.sortInPlace({ $0.startTime < $1.startTime })
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,6 +47,8 @@ class CalendarTableViewController: UITableViewController {
         
         cell.titleLabel.text = event.title + " located at " + event.location
         cell.timeLabel.text = startString + " - " + endString
+        cell.titleLabel.adjustsFontSizeToFitWidth = true
+        cell.timeLabel.adjustsFontSizeToFitWidth = true
         
         return cell
     }

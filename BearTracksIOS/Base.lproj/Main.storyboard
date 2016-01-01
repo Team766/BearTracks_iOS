@@ -268,7 +268,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maa-c1-AAI">
                                 <rect key="frame" x="40" y="197" width="520" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Accountabilities"/>
+                                <state key="normal" title="Accountabilities">
+                                    <color key="titleColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="7YB-lL-Mh9" kind="show" identifier="Accountabilities" id="Bnp-2O-ocY"/>
                                 </connections>
@@ -276,7 +278,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJG-Wn-pob">
                                 <rect key="frame" x="40" y="238" width="520" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Authorities"/>
+                                <state key="normal" title="Authorities">
+                                    <color key="titleColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="auth:" destination="sLx-2L-EAn" eventType="touchUpInside" id="6uF-Ti-APm"/>
                                     <segue destination="CM5-ef-a2A" kind="show" identifier="Authorities" id="36e-GI-WdN"/>
@@ -285,7 +289,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0T-mE-MW6">
                                 <rect key="frame" x="40" y="279" width="520" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Attachments"/>
+                                <state key="normal" title="Attachments">
+                                    <color key="titleColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="attach:" destination="sLx-2L-EAn" eventType="touchUpInside" id="kGC-my-age"/>
                                     <segue destination="q6W-KD-1Pi" kind="show" identifier="Attachments" id="8rn-Pv-8YQ"/>
@@ -540,38 +546,40 @@
         <scene sceneID="CCd-Vb-FgT">
             <objects>
                 <tableViewController id="D1o-M4-BPe" customClass="CalendarTableViewController" customModule="BearTracks" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="XbG-HJ-k5B">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="XbG-HJ-k5B">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CalendarTableViewCell" id="HtQ-90-2dq" customClass="CalendarTableViewCell" customModule="BearTracks" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="80"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HtQ-90-2dq" id="F2d-v9-jHX">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title + Location" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ox0-Vk-D3H">
-                                            <rect key="frame" x="8" y="8" width="584" height="21.5"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StartTime - EndTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ng-Pe-hB8">
-                                            <rect key="frame" x="8" y="51" width="584" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lD7-zc-skT">
+                                            <rect key="frame" x="18" y="21.5" width="564" height="47"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title + Location" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ox0-Vk-D3H">
+                                                    <rect key="frame" x="0.0" y="0.0" width="564" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StartTime - EndTime" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="2Ng-Pe-hB8">
+                                                    <rect key="frame" x="0.0" y="26.5" width="564" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="2Ng-Pe-hB8" secondAttribute="bottom" id="3vC-xm-Sx3"/>
-                                        <constraint firstItem="2Ng-Pe-hB8" firstAttribute="leading" secondItem="F2d-v9-jHX" secondAttribute="leadingMargin" id="GRd-EY-gy6"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="ox0-Vk-D3H" secondAttribute="trailing" id="MWb-F9-77m"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="2Ng-Pe-hB8" secondAttribute="trailing" id="eDS-zk-lbk"/>
-                                        <constraint firstItem="ox0-Vk-D3H" firstAttribute="top" secondItem="F2d-v9-jHX" secondAttribute="topMargin" id="i9F-0n-HCG"/>
-                                        <constraint firstItem="ox0-Vk-D3H" firstAttribute="leading" secondItem="F2d-v9-jHX" secondAttribute="leadingMargin" id="tsp-v2-uBF"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="lD7-zc-skT" secondAttribute="trailing" constant="10" id="3mJ-4P-xpe"/>
+                                        <constraint firstItem="lD7-zc-skT" firstAttribute="centerY" secondItem="F2d-v9-jHX" secondAttribute="centerY" id="agO-fg-qby"/>
+                                        <constraint firstItem="lD7-zc-skT" firstAttribute="leading" secondItem="F2d-v9-jHX" secondAttribute="leadingMargin" constant="10" id="tfq-KS-5op"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
