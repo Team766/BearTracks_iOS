@@ -74,7 +74,7 @@ class MemberTableViewController: UITableViewController {
     }
     
     func loadPeople(){
-        ref.observeEventType(.ChildAdded, withBlock: { snapshot in
+        ref.queryOrderedByChild("container").observeEventType(.ChildAdded, withBlock: { snapshot in
             let name = snapshot.value["name"] as? String
             let photo = snapshot.value["photo"] as? String
             let key = snapshot.key
