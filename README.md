@@ -22,6 +22,15 @@ BearTracks Mobile utilizes:
 
 -[Toast](https://github.com/scalessec/Toast)
 
+### To-Do By June 2016
+
+-Implement Google-Oauth for Users
+
+-Switch to Google Calendar
+
+-Reformat "roles" JSON to better represent real life implementation
+
+-Add ability to add roles and calendar events based on user's permissions
 
 ### Dev 
 
