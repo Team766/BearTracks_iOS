@@ -4,8 +4,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'BearTracksIOS' do
-    pod 'Firebase', '>= 2.4.3'
-    pod 'Toast', '~> 3.0'
+    pod 'Toast-Swift', '~> 1.3.0'
     pod 'CVCalendar', '~> 1.2.8'
 end
 

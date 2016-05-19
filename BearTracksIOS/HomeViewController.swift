@@ -16,7 +16,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:"imageTapped:")
+        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(FirstViewController.imageTapped(_:)))
         homeImage.userInteractionEnabled = true
         homeImage.addGestureRecognizer(tapGestureRecognizer)
     }

@@ -25,5 +25,14 @@ class CalendarEvent {
         self.location = location
         self.title = title
     }
-    
+
+    init(location: String, title: String){
+        self.startTime = 0
+        self.endTime = 0
+        self.startDate = NSDate()
+        self.endDate = NSDate()
+        self.location = location
+        self.title = title
+    }
+
 }

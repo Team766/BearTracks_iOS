@@ -9,17 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Firebase.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-BearTracksIOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Toast.xcscheme</key>
+		<key>Pods-BearTracksIOSTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Toast-Swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,12 +27,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3EB6E45DCD253B8AC1A45F547A38AF11</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B7AC9326D819482593FE118E915409D7</key>
+		<key>2836B3256159300BE88F14ACEEC01145</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +37,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C43704C31E1049E8EC93226078D48931</key>
+		<key>CC17CF756AEB9F122D628DC7D4DE5589</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E0904255508FA74F9722019980FA3E77</key>
 		<dict>
 			<key>primary</key>
 			<true/>

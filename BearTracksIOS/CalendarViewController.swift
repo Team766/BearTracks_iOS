@@ -61,7 +61,12 @@ class CalendarViewController: UIViewController, CVCalendarViewDelegate, CVCalend
             let end = snapshot.value["end"] as? Double
             let location = snapshot.value["location"] as? String
             let title = snapshot.value["title"] as? String
-            let event = CalendarEvent(start: start!, end: end!, location: location!, title: title!)
+            let event:CalendarEvent
+            if(start != nil && end != nil){
+                event = CalendarEvent(start: start!, end: end!, location: location!, title: title!)
+            }else{
+                event = CalendarEvent(location:location!, title: title!)
+            }
             self.events.append(event)
             self.calendarView.contentController.refreshPresentedMonth()
         })

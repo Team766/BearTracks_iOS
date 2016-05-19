@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Toast
 
 class LoginViewController: UIViewController, UITextFieldDelegate{
     
@@ -31,7 +32,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         passwordTextField.delegate = self
         passwordTextField.secureTextEntry = true
         
-        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:"dismissKeyboard:")
+        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(LoginViewController.dismissKeyboard(_:)))
         self.view.addGestureRecognizer(tapGestureRecognizer)
     }
     
